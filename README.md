@@ -52,6 +52,8 @@ php artisan vendor:publish --force
 ```
 * Include the PayPal credentials in the loadPayPalScript method. Additionally, ensure that the credentials are entered in the PayPal payment gateway section within the Bagisto admin panel.
 
+* Aso add the mail credentials in the .env file to receive the giftcard via email.
+
 * Add the below code in the CartResource File after the payment_method_title :
 
 ```
@@ -61,4 +63,6 @@ $this->mergeWhen($this->giftcard_number, [
     'remaining_giftcard_amount' => $this->remaining_giftcard_amount,
 ]),
 ```
+
+
 That's it, now just execute the project on your specified domain.
