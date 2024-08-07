@@ -13,7 +13,7 @@ The Bagisto gift card extension proves invaluable for customers seeking to redee
 * **Integration Compatibility:** Seamlessly integrate with existing e-commerce platforms for smooth operation and enhanced functionality.
 * **Promotional Tools:** Utilize gift cards as part of promotional campaigns, driving sales and customer engagement.
 * **Multilingual Support:** The extension will function across 19 different languages, which are currently supported by Bagisto.
-* **Version Compatible:** The extension is compatible with both Bagisto version 2.0.0 and the latest version 2.2.2. You can find these versions listed under the Tags [Link Text](https://github.com/brainstreaminfo/bagistogiftcard/tags).
+* **Version Compatible:** The extension is compatible with both Bagisto version 2.0.0 and the latest version 2.2.2. You can find these versions listed under the Tags [Tags](https://github.com/brainstreaminfo/bagistogiftcard/tags).
 
 # Requirements:
 * Bagisto: v2.0.0, v2.2.2
