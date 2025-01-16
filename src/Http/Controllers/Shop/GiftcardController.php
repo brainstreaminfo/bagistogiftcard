@@ -12,7 +12,7 @@ use Brainstream\Giftcard\Models\GiftCardPayment;
 use Brainstream\Giftcard\Http\Controllers\MailController;
 use Illuminate\Http\Resources\Json\JsonResource;
 use Illuminate\Http\Response;
-use Brainstream\Checkout\Facades\Cart;
+use Webkul\Checkout\Facades\Cart;
 use Brainstream\Giftcard\Http\Resources\CustomCartResource; 
 use Brainstream\Giftcard\Models\GiftCardBalance;
 use Brainstream\Giftcard\Repositories\GiftCardRepository;

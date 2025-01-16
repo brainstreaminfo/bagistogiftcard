@@ -26,13 +26,13 @@ Unzip the respective extension zip and then merge "packages" folder into project
 * Goto config/app.php file and add following line under 'providers'
 
 ```
-Webkul\Giftcard\Providers\GiftcardServiceProvider::class
+Brainstream\Giftcard\Providers\GiftcardServiceProvider::class
 ```
 
 * Goto composer.json file and add following line under 'psr-4'
 
 ```
-"Webkul\\Giftcard\\": "packages/Webkul/Giftcard/src"
+"Brainstream\\Giftcard\\": "packages/Brainstream/Giftcard/src"
 ```
 * Run these below commands to complete the setup:
 

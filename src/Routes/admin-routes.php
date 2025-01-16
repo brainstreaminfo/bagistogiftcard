@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Webkul\Giftcard\Http\Controllers\Admin\GiftCardController;
+use Brainstream\Giftcard\Http\Controllers\Admin\GiftCardController;
 
 Route::group(['middleware' => ['web', 'admin'], 'prefix' => 'admin/giftcard'], function () {
     Route::controller(GiftCardController::class)->group(function () {

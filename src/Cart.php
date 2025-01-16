@@ -1,10 +1,10 @@
 <?php
 
-namespace Webkul\Giftcard;
+namespace Brainstream\Giftcard;
 
 use Webkul\Checkout\Cart as BaseCart;
 use Webkul\Checkout\Traits\CartCoupons;
-use Webkul\Giftcard\Traits\GiftCardOverrides;
+use Brainstream\Giftcard\Traits\GiftCardOverrides;
 
 class Cart extends BaseCart
 {

@@ -2,7 +2,7 @@
 
 namespace Brainstream\Giftcard\Http\Resources;
 
-use Brainstream\Shop\Http\Resources\CartResource;
+use Webkul\Shop\Http\Resources\CartResource;
 
 class CustomCartResource extends CartResource
 {

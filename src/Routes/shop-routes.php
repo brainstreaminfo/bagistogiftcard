@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Webkul\Giftcard\Http\Controllers\Shop\GiftcardController;
-use Webkul\Giftcard\Http\Controllers\Customer\Account\OrderController;
+use Brainstream\Giftcard\Http\Controllers\Shop\GiftcardController;
+use Brainstream\Giftcard\Http\Controllers\Customer\Account\OrderController;
 
 Route::group(['middleware' => ['web', 'theme', 'locale', 'currency'], 'prefix' => 'giftcard'], function () {
     Route::get('', [GiftcardController::class, 'index'])->name('shop.giftcard.index');

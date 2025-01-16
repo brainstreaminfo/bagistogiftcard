@@ -5,12 +5,12 @@ namespace Brainstream\Giftcard\Providers;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Event;
 use Brainstream\Giftcard\Cart;
-use Brainstream\Checkout\Cart as BaseCart;
-use Brainstream\Sales\Repositories\InvoiceRepository;
+use Webkul\Checkout\Cart as BaseCart;
+use Webkul\Sales\Repositories\InvoiceRepository;
 use Brainstream\Giftcard\Repositories\CustomInvoiceRepository;
-use Brainstream\Sales\Repositories\OrderRepository;
+use Webkul\Sales\Repositories\OrderRepository;
 use Brainstream\Giftcard\Repositories\CustomOrderRepository;
-use Brainstream\Shop\Http\Resources\CartResource;
+use Webkul\Shop\Http\Resources\CartResource;
 use Brainstream\Giftcard\Http\Resources\CustomCartResource;
 
 class GiftcardServiceProvider extends ServiceProvider

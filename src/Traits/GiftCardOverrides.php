@@ -1,9 +1,9 @@
 <?php
 
-namespace Webkul\Giftcard\Traits;
+namespace Brainstream\Giftcard\Traits;
 
-use Webkul\Giftcard\Models\GiftCardBalance;
-use Webkul\Giftcard\Models\GiftCard;
+use Brainstream\Giftcard\Models\GiftCardBalance;
+use Brainstream\Giftcard\Models\GiftCard;
 use Illuminate\Support\Facades\Event;
 use Webkul\Tax\Helpers\Tax;
 use Illuminate\Support\Arr;

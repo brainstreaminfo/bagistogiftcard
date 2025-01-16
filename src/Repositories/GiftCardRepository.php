@@ -5,7 +5,7 @@ namespace Brainstream\Giftcard\Repositories;
 use Illuminate\Support\Facades\Event;
 use Brainstream\Giftcard\Models\GiftCard;
 use Brainstream\Giftcard\Models\GiftCardBalance;
-use Brainstream\Core\Eloquent\Repository;
+use Webkul\Core\Eloquent\Repository;
 
 class GiftCardRepository extends Repository
 {

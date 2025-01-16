@@ -3,7 +3,7 @@
 namespace Brainstream\Giftcard\Http\Controllers\Customer\Account;
 
 
-use Brainstream\Shop\Http\Controllers\Customer\Account\OrderController as BaseOrderController;
+use Webkul\Shop\Http\Controllers\Customer\Account\OrderController as BaseOrderController;
 use Brainstream\Giftcard\Models\GiftCardBalance;
 use Brainstream\Giftcard\Models\GiftCard;
 

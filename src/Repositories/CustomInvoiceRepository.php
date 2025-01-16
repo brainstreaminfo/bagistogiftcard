@@ -2,7 +2,7 @@
 
 namespace Brainstream\Giftcard\Repositories;
 
-use Brainstream\Sales\Repositories\InvoiceRepository as BaseInvoiceRepository;
+use Webkul\Sales\Repositories\InvoiceRepository as BaseInvoiceRepository;
 
 class CustomInvoiceRepository extends BaseInvoiceRepository
 {

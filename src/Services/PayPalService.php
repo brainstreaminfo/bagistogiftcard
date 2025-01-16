@@ -1,6 +1,6 @@
 <?php
 
-namespace Webkul\Giftcard\Services;
+namespace Brainstream\Giftcard\Services;
 
 use PayPalCheckoutSdk\Core\PayPalHttpClient;
 use PayPalCheckoutSdk\Core\SandboxEnvironment; // or ProductionEnvironment

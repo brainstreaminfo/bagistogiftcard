@@ -2,7 +2,7 @@
 
 namespace Brainstream\Giftcard\Repositories;
 
-use Brainstream\Sales\Repositories\OrderRepository as BaseOrderRepository;
+use Webkul\Sales\Repositories\OrderRepository as BaseOrderRepository;
 
 class CustomOrderRepository extends BaseOrderRepository
 {
