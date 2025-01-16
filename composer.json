@@ -11,13 +11,13 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "Webkul\\Giftcard\\": "src/"
+            "Brainstream\\Giftcard\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Webkul\\Giftcard\\Providers\\GiftcardServiceProvider"
+                "Brainstream\\Giftcard\\Providers\\GiftcardServiceProvider"
             ],
             "aliases": {}
         }
