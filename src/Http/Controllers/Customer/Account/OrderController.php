@@ -1,11 +1,11 @@
 <?php
 
-namespace Webkul\Giftcard\Http\Controllers\Customer\Account;
+namespace Brainstream\Giftcard\Http\Controllers\Customer\Account;
 
 
-use Webkul\Shop\Http\Controllers\Customer\Account\OrderController as BaseOrderController;
-use Webkul\Giftcard\Models\GiftCardBalance;
-use Webkul\Giftcard\Models\GiftCard;
+use Brainstream\Shop\Http\Controllers\Customer\Account\OrderController as BaseOrderController;
+use Brainstream\Giftcard\Models\GiftCardBalance;
+use Brainstream\Giftcard\Models\GiftCard;
 
 class OrderController extends BaseOrderController
 {
