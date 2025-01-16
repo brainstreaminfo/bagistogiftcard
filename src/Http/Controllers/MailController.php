@@ -1,6 +1,6 @@
 <?php
 
-namespace Webkul\Giftcard\Http\Controllers;
+namespace Brainstream\Giftcard\Http\Controllers;
 
 use Illuminate\Support\Facades\Mail;
 
