@@ -1,6 +1,6 @@
 <?php
 
-namespace Webkul\Giftcard\Providers;
+namespace Brainstream\Giftcard\Providers;
 
 use Konekt\Concord\BaseModuleServiceProvider;
 
