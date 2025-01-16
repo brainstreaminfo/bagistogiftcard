@@ -1,21 +1,21 @@
 <?php
 
-namespace Webkul\Giftcard\Http\Controllers\Shop;
+namespace Brainstream\Giftcard\Http\Controllers\Shop;
 
 use Illuminate\Routing\Controller;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
-use Webkul\Giftcard\Models\GiftCard;
-use Webkul\Giftcard\Models\GiftCardPayment;
-use Webkul\Giftcard\Http\Controllers\MailController;
+use Brainstream\Giftcard\Models\GiftCard;
+use Brainstream\Giftcard\Models\GiftCardPayment;
+use Brainstream\Giftcard\Http\Controllers\MailController;
 use Illuminate\Http\Resources\Json\JsonResource;
 use Illuminate\Http\Response;
-use Webkul\Checkout\Facades\Cart;
-use Webkul\Giftcard\Http\Resources\CustomCartResource; 
-use Webkul\Giftcard\Models\GiftCardBalance;
-use Webkul\Giftcard\Repositories\GiftCardRepository;
+use Brainstream\Checkout\Facades\Cart;
+use Brainstream\Giftcard\Http\Resources\CustomCartResource; 
+use Brainstream\Giftcard\Models\GiftCardBalance;
+use Brainstream\Giftcard\Repositories\GiftCardRepository;
 
 class GiftcardController extends Controller
 {
