@@ -1,8 +1,8 @@
 <?php
 
-namespace Webkul\Giftcard\Repositories;
+namespace Brainstream\Giftcard\Repositories;
 
-use Webkul\Sales\Repositories\InvoiceRepository as BaseInvoiceRepository;
+use Brainstream\Sales\Repositories\InvoiceRepository as BaseInvoiceRepository;
 
 class CustomInvoiceRepository extends BaseInvoiceRepository
 {
