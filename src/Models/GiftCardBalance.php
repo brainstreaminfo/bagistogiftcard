@@ -1,6 +1,6 @@
 <?php
 
-namespace Webkul\Giftcard\Models;
+namespace Brainstream\Giftcard\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
