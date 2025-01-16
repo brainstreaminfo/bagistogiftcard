@@ -1,15 +1,15 @@
 <?php
 
-namespace Webkul\Giftcard\Http\Controllers\Admin;
+namespace Brainstream\Giftcard\Http\Controllers\Admin;
 
 use Illuminate\Http\JsonResponse;
-use Webkul\Giftcard\DataGrids\GiftCard\GiftCardBalanceDataGrid;
-use Webkul\Giftcard\DataGrids\GiftCard\GiftCardDataGrid;
-use Webkul\Giftcard\DataGrids\GiftCard\GiftCardPaymentDataGrid; 
-use Webkul\Giftcard\Http\Controllers\Controller;
+use Brainstream\Giftcard\DataGrids\GiftCard\GiftCardBalanceDataGrid;
+use Brainstream\Giftcard\DataGrids\GiftCard\GiftCardDataGrid;
+use Brainstream\Giftcard\DataGrids\GiftCard\GiftCardPaymentDataGrid; 
+use Brainstream\Giftcard\Http\Controllers\Controller;
 use Illuminate\Support\Str;
-use Webkul\Giftcard\Models\GiftCard;
-use Webkul\Giftcard\Repositories\GiftCardRepository;
+use Brainstream\Giftcard\Models\GiftCard;
+use Brainstream\Giftcard\Repositories\GiftCardRepository;
 
 class GiftCardController extends Controller
 {
