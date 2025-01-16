@@ -1,9 +1,9 @@
 <?php
 
-namespace Webkul\Giftcard\DataGrids\GiftCard;
+namespace Brainstream\Giftcard\DataGrids\GiftCard;
 
 use Illuminate\Support\Facades\DB;
-use Webkul\DataGrid\DataGrid;
+use Brainstream\DataGrid\DataGrid;
 
 class GiftCardBalanceDataGrid extends DataGrid
 {
