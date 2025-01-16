@@ -1,11 +1,11 @@
 <?php
 
-namespace Webkul\Giftcard\Repositories;
+namespace Brainstream\Giftcard\Repositories;
 
 use Illuminate\Support\Facades\Event;
-use Webkul\Giftcard\Models\GiftCard;
-use Webkul\Giftcard\Models\GiftCardBalance;
-use Webkul\Core\Eloquent\Repository;
+use Brainstream\Giftcard\Models\GiftCard;
+use Brainstream\Giftcard\Models\GiftCardBalance;
+use Brainstream\Core\Eloquent\Repository;
 
 class GiftCardRepository extends Repository
 {
