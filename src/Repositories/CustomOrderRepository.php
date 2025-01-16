@@ -1,8 +1,8 @@
 <?php
 
-namespace Webkul\Giftcard\Repositories;
+namespace Brainstream\Giftcard\Repositories;
 
-use Webkul\Sales\Repositories\OrderRepository as BaseOrderRepository;
+use Brainstream\Sales\Repositories\OrderRepository as BaseOrderRepository;
 
 class CustomOrderRepository extends BaseOrderRepository
 {
