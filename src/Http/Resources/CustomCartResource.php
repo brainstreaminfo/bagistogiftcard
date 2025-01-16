@@ -1,8 +1,8 @@
 <?php
 
-namespace Webkul\Giftcard\Http\Resources;
+namespace Brainstream\Giftcard\Http\Resources;
 
-use Webkul\Shop\Http\Resources\CartResource;
+use Brainstream\Shop\Http\Resources\CartResource;
 
 class CustomCartResource extends CartResource
 {
