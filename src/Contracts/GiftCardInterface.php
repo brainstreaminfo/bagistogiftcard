@@ -1,6 +1,6 @@
 <?php
 
-namespace Webkul\Giftcard\Contracts;
+namespace Brainstream\Giftcard\Contracts;
 
 interface GiftCardInterface
 {
