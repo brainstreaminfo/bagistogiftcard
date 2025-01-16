@@ -1,17 +1,17 @@
 <?php
 
-namespace Webkul\Giftcard\Providers;
+namespace Brainstream\Giftcard\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Event;
-use Webkul\Giftcard\Cart;
-use Webkul\Checkout\Cart as BaseCart;
-use Webkul\Sales\Repositories\InvoiceRepository;
-use Webkul\Giftcard\Repositories\CustomInvoiceRepository;
-use Webkul\Sales\Repositories\OrderRepository;
-use Webkul\Giftcard\Repositories\CustomOrderRepository;
-use Webkul\Shop\Http\Resources\CartResource;
-use Webkul\Giftcard\Http\Resources\CustomCartResource;
+use Brainstream\Giftcard\Cart;
+use Brainstream\Checkout\Cart as BaseCart;
+use Brainstream\Sales\Repositories\InvoiceRepository;
+use Brainstream\Giftcard\Repositories\CustomInvoiceRepository;
+use Brainstream\Sales\Repositories\OrderRepository;
+use Brainstream\Giftcard\Repositories\CustomOrderRepository;
+use Brainstream\Shop\Http\Resources\CartResource;
+use Brainstream\Giftcard\Http\Resources\CustomCartResource;
 
 class GiftcardServiceProvider extends ServiceProvider
 {
@@ -69,8 +69,8 @@ class GiftcardServiceProvider extends ServiceProvider
 
         // Bind interface to implementation
         $this->app->bind(
-            \Webkul\Giftcard\Contracts\GiftCardInterface::class,
-            \Webkul\Giftcard\Repositories\GiftCardRepository::class
+            \Brainstream\Giftcard\Contracts\GiftCardInterface::class,
+            \Brainstream\Giftcard\Repositories\GiftCardRepository::class
         );
 
         // Override the Cart class
