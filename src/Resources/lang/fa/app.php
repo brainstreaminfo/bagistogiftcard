@@ -132,6 +132,28 @@ return [
             'required' => 'این فیلد الزامی است.',
             'invalid-email' => 'لطفاً یک ایمیل معتبر وارد کنید.',
             'fix-errors' => 'لطفاً فیلدهای مشخص‌شده را اصلاح کنید.',
+            'feature-email' => 'ارسال فوری از طریق ایمیل',
+            'feature-validity' => 'معتبر به مدت :days روز',
+            'feature-redeem' => 'قابل استفاده در هر سفارش هنگام پرداخت',
+            'step-occasion' => 'مناسبت',
+            'step-details' => 'شخصی‌سازی',
+            'step-payment' => 'پرداخت',
+            'filter-all' => 'همه',
+            'filter-festivals' => 'جشنواره‌ها',
+            'filter-celebrations' => 'جشن‌ها',
+            'filter-family' => 'خانواده',
+            'change-occasion' => 'تغییر مناسبت',
+            'custom-amount' => 'یا مبلغ دلخواه را وارد کنید',
+            'recipient' => 'گیرنده',
+            'sender' => 'از طرف شما',
+            'to' => 'به',
+            'from' => 'از',
+            'message-placeholder' => 'چند کلمه برای گیرنده بنویسید',
+            'summary' => 'خلاصه سفارش',
+            'card-value' => 'ارزش کارت هدیه',
+            'total' => 'مجموع',
+            'secure-note' => 'پرداخت امن با PayPal. مبلغ تنها پس از تأیید پرداخت توسط شما کسر می‌شود.',
+            'sample-code' => 'XXXX-XXXX-XXXX-XXXX',
         ],
 
         'occasions' => [
@@ -159,6 +181,7 @@ return [
             'good-luck' => 'موفق باشید',
             'grandparents-day' => 'روز پدربزرگ و مادربزرگ',
             'holi' => 'هولی',
+            'new-year' => 'سال نو',
         ],
 
         'greetings' => [
@@ -186,11 +209,14 @@ return [
             'good-luck' => 'در همه تلاش‌های آینده‌ات موفق باشی!',
             'grandparents-day' => 'روز پدربزرگ و مادربزرگ مبارک! دوستتان داریم!',
             'holi' => 'هولی مبارک! زندگی‌ات پر از رنگ باشد!',
+            'new-year' => 'سال نو مبارک! به سلامتی شروع‌های تازه!',
         ],
 
         'success' => [
             'title' => 'سپاسگزاریم!',
             'message' => 'کارت هدیه شما به ارزش :amount به :email ارسال شد.',
+            'next-steps' => 'گیرنده ایمیلی حاوی کد کارت هدیه دریافت می‌کند و می‌تواند هنگام پرداخت از آن استفاده کند.',
+            'buy-another' => 'ارسال کارت هدیه دیگر',
             'continue-shopping' => 'ادامه خرید',
         ],
 

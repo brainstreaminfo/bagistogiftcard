@@ -132,6 +132,28 @@ return [
             'required' => 'Bu alan zorunludur.',
             'invalid-email' => 'Lütfen geçerli bir e-posta adresi girin.',
             'fix-errors' => 'Lütfen işaretli alanları düzeltin.',
+            'feature-email' => 'E-postayla anında teslim',
+            'feature-validity' => ':days gün geçerli',
+            'feature-redeem' => 'Ödeme sırasında tüm siparişlerde kullanılabilir',
+            'step-occasion' => 'Özel Gün',
+            'step-details' => 'Kişiselleştir',
+            'step-payment' => 'Ödeme',
+            'filter-all' => 'Tümü',
+            'filter-festivals' => 'Bayramlar',
+            'filter-celebrations' => 'Kutlamalar',
+            'filter-family' => 'Aile',
+            'change-occasion' => 'Özel Günü Değiştir',
+            'custom-amount' => 'Veya bir tutar girin',
+            'recipient' => 'Alıcı',
+            'sender' => 'Sizden',
+            'to' => 'Kime',
+            'from' => 'Kimden',
+            'message-placeholder' => 'Alıcı için birkaç söz yazın',
+            'summary' => 'Sipariş Özeti',
+            'card-value' => 'Hediye kartı değeri',
+            'total' => 'Toplam',
+            'secure-note' => 'PayPal ile güvenli ödeme. Ücret yalnızca ödemeyi onayladıktan sonra alınır.',
+            'sample-code' => 'XXXX-XXXX-XXXX-XXXX',
         ],
 
         'occasions' => [
@@ -159,6 +181,7 @@ return [
             'good-luck' => 'Bol Şans',
             'grandparents-day' => 'Büyükanne ve Büyükbabalar Günü',
             'holi' => 'Holi',
+            'new-year' => 'Yeni Yıl',
         ],
 
         'greetings' => [
@@ -186,11 +209,14 @@ return [
             'good-luck' => 'Gelecekteki tüm işlerinde bol şans!',
             'grandparents-day' => 'Büyükanne ve Büyükbabalar Gününüz kutlu olsun! Sizi seviyoruz!',
             'holi' => 'Mutlu Holi! Hayatın renklerle dolsun!',
+            'new-year' => 'Mutlu yıllar! Yeni başlangıçlara!',
         ],
 
         'success' => [
             'title' => 'Teşekkürler!',
             'message' => ':amount değerindeki hediye kartınız :email adresine gönderildi.',
+            'next-steps' => 'Alıcı, hediye kartı kodunu içeren bir e-posta alır ve kodu ödeme sırasında kullanabilir.',
+            'buy-another' => 'Başka Bir Hediye Kartı Gönder',
             'continue-shopping' => 'Alışverişe Devam Et',
         ],
 

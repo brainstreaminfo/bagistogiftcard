@@ -132,6 +132,28 @@ return [
             'required' => 'This field is required.',
             'invalid-email' => 'Please enter a valid email address.',
             'fix-errors' => 'Please correct the highlighted fields.',
+            'feature-email' => 'Delivered instantly by email',
+            'feature-validity' => 'Valid for :days days',
+            'feature-redeem' => 'Redeem on any order at checkout',
+            'step-occasion' => 'Occasion',
+            'step-details' => 'Personalise',
+            'step-payment' => 'Payment',
+            'filter-all' => 'All',
+            'filter-festivals' => 'Festivals',
+            'filter-celebrations' => 'Celebrations',
+            'filter-family' => 'Family',
+            'change-occasion' => 'Change occasion',
+            'custom-amount' => 'Or enter an amount',
+            'recipient' => 'Recipient',
+            'sender' => 'From You',
+            'to' => 'To',
+            'from' => 'From',
+            'message-placeholder' => 'Write a few words for the recipient',
+            'summary' => 'Order Summary',
+            'card-value' => 'Gift card value',
+            'total' => 'Total',
+            'secure-note' => 'Secure payment with PayPal. You are only charged after you approve the payment.',
+            'sample-code' => 'XXXX-XXXX-XXXX-XXXX',
         ],
 
         'occasions' => [
@@ -159,6 +181,7 @@ return [
             'good-luck' => 'Good Luck',
             'grandparents-day' => 'Grandparents Day',
             'holi' => 'Holi',
+            'new-year' => 'New Year',
         ],
 
         'greetings' => [
@@ -186,11 +209,14 @@ return [
             'good-luck' => 'Good luck in all your future endeavours!',
             'grandparents-day' => 'Happy Grandparents Day! We love you!',
             'holi' => 'Happy Holi! May your life be full of colours!',
+            'new-year' => 'Happy New Year! Cheers to new beginnings!',
         ],
 
         'success' => [
             'title' => 'Thank You!',
             'message' => 'Your gift card worth :amount has been sent to :email.',
+            'next-steps' => 'The recipient gets an email with the gift card code and can redeem it at checkout.',
+            'buy-another' => 'Send Another Gift Card',
             'continue-shopping' => 'Continue Shopping',
         ],
 

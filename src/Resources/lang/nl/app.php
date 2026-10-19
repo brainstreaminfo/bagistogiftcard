@@ -132,6 +132,28 @@ return [
             'required' => 'Dit veld is verplicht.',
             'invalid-email' => 'Voer een geldig e-mailadres in.',
             'fix-errors' => 'Corrigeer de gemarkeerde velden.',
+            'feature-email' => 'Direct per e-mail bezorgd',
+            'feature-validity' => ':days dagen geldig',
+            'feature-redeem' => 'In te wisselen bij elke bestelling tijdens het afrekenen',
+            'step-occasion' => 'Gelegenheid',
+            'step-details' => 'Personaliseren',
+            'step-payment' => 'Betaling',
+            'filter-all' => 'Alle',
+            'filter-festivals' => 'Feestdagen',
+            'filter-celebrations' => 'Vieringen',
+            'filter-family' => 'Familie',
+            'change-occasion' => 'Gelegenheid wijzigen',
+            'custom-amount' => 'Of voer een bedrag in',
+            'recipient' => 'Ontvanger',
+            'sender' => 'Van u',
+            'to' => 'Aan',
+            'from' => 'Van',
+            'message-placeholder' => 'Schrijf een paar woorden voor de ontvanger',
+            'summary' => 'Besteloverzicht',
+            'card-value' => 'Waarde cadeaukaart',
+            'total' => 'Totaal',
+            'secure-note' => 'Veilig betalen met PayPal. Er wordt pas iets in rekening gebracht nadat u de betaling hebt goedgekeurd.',
+            'sample-code' => 'XXXX-XXXX-XXXX-XXXX',
         ],
 
         'occasions' => [
@@ -159,6 +181,7 @@ return [
             'good-luck' => 'Veel succes',
             'grandparents-day' => 'Grootouderdag',
             'holi' => 'Holi',
+            'new-year' => 'Nieuwjaar',
         ],
 
         'greetings' => [
@@ -186,11 +209,14 @@ return [
             'good-luck' => 'Veel succes met al je toekomstige plannen!',
             'grandparents-day' => 'Fijne Grootouderdag! We houden van jullie!',
             'holi' => 'Fijne Holi! Moge je leven vol kleur zijn!',
+            'new-year' => 'Gelukkig nieuwjaar! Op een nieuw begin!',
         ],
 
         'success' => [
             'title' => 'Bedankt!',
             'message' => 'Uw cadeaukaart ter waarde van :amount is verzonden naar :email.',
+            'next-steps' => 'De ontvanger krijgt een e-mail met de cadeaukaartcode en kan deze bij het afrekenen inwisselen.',
+            'buy-another' => 'Nog een cadeaukaart versturen',
             'continue-shopping' => 'Verder winkelen',
         ],
 

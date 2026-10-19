@@ -132,6 +132,28 @@ return [
             'required' => 'שדה זה הוא חובה.',
             'invalid-email' => 'יש להזין כתובת אימייל תקינה.',
             'fix-errors' => 'יש לתקן את השדות המסומנים.',
+            'feature-email' => 'נשלח מיד באימייל',
+            'feature-validity' => 'בתוקף למשך :days ימים',
+            'feature-redeem' => 'ניתן למימוש בכל הזמנה בקופה',
+            'step-occasion' => 'אירוע',
+            'step-details' => 'התאמה אישית',
+            'step-payment' => 'תשלום',
+            'filter-all' => 'הכול',
+            'filter-festivals' => 'חגים',
+            'filter-celebrations' => 'חגיגות',
+            'filter-family' => 'משפחה',
+            'change-occasion' => 'שינוי אירוע',
+            'custom-amount' => 'או הזינו סכום',
+            'recipient' => 'נמען',
+            'sender' => 'ממך',
+            'to' => 'אל',
+            'from' => 'מאת',
+            'message-placeholder' => 'כתבו כמה מילים לנמען',
+            'summary' => 'סיכום הזמנה',
+            'card-value' => 'ערך כרטיס המתנה',
+            'total' => 'סה"כ',
+            'secure-note' => 'תשלום מאובטח באמצעות PayPal. החיוב יתבצע רק לאחר שתאשרו את התשלום.',
+            'sample-code' => 'XXXX-XXXX-XXXX-XXXX',
         ],
 
         'occasions' => [
@@ -159,6 +181,7 @@ return [
             'good-luck' => 'בהצלחה',
             'grandparents-day' => 'יום הסבים והסבתות',
             'holi' => 'הולי',
+            'new-year' => 'השנה החדשה',
         ],
 
         'greetings' => [
@@ -186,11 +209,14 @@ return [
             'good-luck' => 'בהצלחה בכל דרכיך בעתיד!',
             'grandparents-day' => 'יום סבים וסבתות שמח! אוהבים אתכם!',
             'holi' => 'הולי שמח! שהחיים שלך יהיו מלאי צבעים!',
+            'new-year' => 'שנה טובה! לחיי התחלות חדשות!',
         ],
 
         'success' => [
             'title' => 'תודה!',
             'message' => 'כרטיס המתנה שלך בשווי :amount נשלח אל :email.',
+            'next-steps' => 'הנמען יקבל אימייל עם קוד כרטיס המתנה ויוכל לממש אותו בקופה.',
+            'buy-another' => 'שליחת כרטיס מתנה נוסף',
             'continue-shopping' => 'המשך קנייה',
         ],
 

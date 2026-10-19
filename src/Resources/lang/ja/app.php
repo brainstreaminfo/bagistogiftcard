@@ -132,6 +132,28 @@ return [
             'required' => 'この項目は必須です。',
             'invalid-email' => '有効なメールアドレスを入力してください。',
             'fix-errors' => '強調表示された項目を修正してください。',
+            'feature-email' => 'メールで即時にお届け',
+            'feature-validity' => ':days 日間有効',
+            'feature-redeem' => 'チェックアウト時にどのご注文にも利用可能',
+            'step-occasion' => 'シーン',
+            'step-details' => 'カスタマイズ',
+            'step-payment' => 'お支払い',
+            'filter-all' => 'すべて',
+            'filter-festivals' => 'お祭り・祝祭日',
+            'filter-celebrations' => 'お祝い',
+            'filter-family' => '家族',
+            'change-occasion' => 'シーンを変更',
+            'custom-amount' => 'または金額を入力',
+            'recipient' => '受取人',
+            'sender' => '贈り主',
+            'to' => '宛先',
+            'from' => '差出人',
+            'message-placeholder' => '受取人へのメッセージを入力してください',
+            'summary' => '注文内容',
+            'card-value' => 'ギフトカードの金額',
+            'total' => '合計',
+            'secure-note' => 'PayPal による安全なお支払い。お支払いを承認された後にのみ請求されます。',
+            'sample-code' => 'XXXX-XXXX-XXXX-XXXX',
         ],
 
         'occasions' => [
@@ -159,6 +181,7 @@ return [
             'good-luck' => '幸運を祈って',
             'grandparents-day' => '敬老の日',
             'holi' => 'ホーリー',
+            'new-year' => '新年',
         ],
 
         'greetings' => [
@@ -186,11 +209,14 @@ return [
             'good-luck' => 'これからのご活躍を心よりお祈りしています！',
             'grandparents-day' => '敬老の日おめでとう！いつもありがとう、大好きです！',
             'holi' => 'ハッピーホーリー！あなたの毎日が色とりどりでありますように！',
+            'new-year' => '明けましておめでとうございます！素敵な一年になりますように！',
         ],
 
         'success' => [
             'title' => 'ありがとうございます！',
             'message' => ':amount 分のギフトカードを :email に送信しました。',
+            'next-steps' => '受取人にはギフトカードコードが記載されたメールが届き、チェックアウト時にご利用いただけます。',
+            'buy-another' => '別のギフトカードを贈る',
             'continue-shopping' => '買い物を続ける',
         ],
 

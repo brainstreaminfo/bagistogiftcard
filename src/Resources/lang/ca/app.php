@@ -132,6 +132,28 @@ return [
             'required' => 'Aquest camp és obligatori.',
             'invalid-email' => 'Introduïu una adreça electrònica vàlida.',
             'fix-errors' => 'Corregiu els camps destacats.',
+            'feature-email' => 'Lliurament instantani per correu electrònic',
+            'feature-validity' => 'Vàlida durant :days dies',
+            'feature-redeem' => 'Bescanvia-la en qualsevol comanda en pagar',
+            'step-occasion' => 'Ocasió',
+            'step-details' => 'Personalitza',
+            'step-payment' => 'Pagament',
+            'filter-all' => 'Totes',
+            'filter-festivals' => 'Festivitats',
+            'filter-celebrations' => 'Celebracions',
+            'filter-family' => 'Família',
+            'change-occasion' => 'Canvia l\'ocasió',
+            'custom-amount' => 'O introdueix un import',
+            'recipient' => 'Destinatari',
+            'sender' => 'De part teva',
+            'to' => 'Per a',
+            'from' => 'De',
+            'message-placeholder' => 'Escriu unes paraules per al destinatari',
+            'summary' => 'Resum de la comanda',
+            'card-value' => 'Valor de la targeta regal',
+            'total' => 'Total',
+            'secure-note' => 'Pagament segur amb PayPal. Només se\'t cobrarà quan hagis aprovat el pagament.',
+            'sample-code' => 'XXXX-XXXX-XXXX-XXXX',
         ],
 
         'occasions' => [
@@ -159,6 +181,7 @@ return [
             'good-luck' => 'Bona sort',
             'grandparents-day' => 'Dia dels Avis',
             'holi' => 'Holi',
+            'new-year' => 'Cap d\'Any',
         ],
 
         'greetings' => [
@@ -186,11 +209,14 @@ return [
             'good-luck' => 'Molta sort en tots els teus projectes futurs!',
             'grandparents-day' => 'Feliç Dia dels Avis! Us estimem!',
             'holi' => 'Feliç Holi! Que la teva vida s\'ompli de colors!',
+            'new-year' => 'Feliç Any Nou! Per un nou començament!',
         ],
 
         'success' => [
             'title' => 'Gràcies!',
             'message' => 'La teva targeta regal per valor de :amount s\'ha enviat a :email.',
+            'next-steps' => 'El destinatari rep un correu electrònic amb el codi de la targeta regal i el pot bescanviar en pagar.',
+            'buy-another' => 'Envia una altra targeta regal',
             'continue-shopping' => 'Continua comprant',
         ],
 

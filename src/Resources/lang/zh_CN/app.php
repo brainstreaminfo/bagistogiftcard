@@ -132,6 +132,28 @@ return [
             'required' => '此字段为必填项。',
             'invalid-email' => '请输入有效的电子邮件地址。',
             'fix-errors' => '请更正标出的字段。',
+            'feature-email' => '通过邮件即时发送',
+            'feature-validity' => ':days 天内有效',
+            'feature-redeem' => '结账时可用于任意订单',
+            'step-occasion' => '场合',
+            'step-details' => '个性化',
+            'step-payment' => '支付',
+            'filter-all' => '全部',
+            'filter-festivals' => '节日',
+            'filter-celebrations' => '庆典',
+            'filter-family' => '家人',
+            'change-occasion' => '更换场合',
+            'custom-amount' => '或输入金额',
+            'recipient' => '收件人',
+            'sender' => '赠送人',
+            'to' => '致',
+            'from' => '来自',
+            'message-placeholder' => '为收件人写几句话',
+            'summary' => '订单摘要',
+            'card-value' => '礼品卡面值',
+            'total' => '合计',
+            'secure-note' => '通过 PayPal 安全支付。只有在您确认付款后才会扣款。',
+            'sample-code' => 'XXXX-XXXX-XXXX-XXXX',
         ],
 
         'occasions' => [
@@ -159,6 +181,7 @@ return [
             'good-luck' => '好运',
             'grandparents-day' => '祖父母节',
             'holi' => '洒红节',
+            'new-year' => '新年',
         ],
 
         'greetings' => [
@@ -186,11 +209,14 @@ return [
             'good-luck' => '祝你未来一切顺利！',
             'grandparents-day' => '祖父母节快乐！我们爱你们！',
             'holi' => '洒红节快乐！愿你的生活多姿多彩！',
+            'new-year' => '新年快乐！为新的开始干杯！',
         ],
 
         'success' => [
             'title' => '谢谢！',
             'message' => '面值 :amount 的礼品卡已发送至 :email。',
+            'next-steps' => '收件人将收到一封包含礼品卡卡号的邮件，并可在结账时使用。',
+            'buy-another' => '再送一张礼品卡',
             'continue-shopping' => '继续购物',
         ],
 

@@ -132,6 +132,28 @@ return [
             'required' => 'Questo campo è obbligatorio.',
             'invalid-email' => 'Inserisci un indirizzo email valido.',
             'fix-errors' => 'Correggi i campi evidenziati.',
+            'feature-email' => 'Consegna immediata via email',
+            'feature-validity' => 'Valida per :days giorni',
+            'feature-redeem' => 'Utilizzabile su qualsiasi ordine al checkout',
+            'step-occasion' => 'Occasione',
+            'step-details' => 'Personalizza',
+            'step-payment' => 'Pagamento',
+            'filter-all' => 'Tutte',
+            'filter-festivals' => 'Festività',
+            'filter-celebrations' => 'Celebrazioni',
+            'filter-family' => 'Famiglia',
+            'change-occasion' => 'Cambia occasione',
+            'custom-amount' => 'Oppure inserisci un importo',
+            'recipient' => 'Destinatario',
+            'sender' => 'Da Parte Tua',
+            'to' => 'A',
+            'from' => 'Da',
+            'message-placeholder' => 'Scrivi qualche parola per il destinatario',
+            'summary' => 'Riepilogo Ordine',
+            'card-value' => 'Valore della carta regalo',
+            'total' => 'Totale',
+            'secure-note' => 'Pagamento sicuro con PayPal. L\'addebito avviene solo dopo che hai approvato il pagamento.',
+            'sample-code' => 'XXXX-XXXX-XXXX-XXXX',
         ],
 
         'occasions' => [
@@ -159,6 +181,7 @@ return [
             'good-luck' => 'Buona Fortuna',
             'grandparents-day' => 'Festa dei Nonni',
             'holi' => 'Holi',
+            'new-year' => 'Capodanno',
         ],
 
         'greetings' => [
@@ -186,11 +209,14 @@ return [
             'good-luck' => 'Buona fortuna per tutti i tuoi progetti futuri!',
             'grandparents-day' => 'Buona Festa dei Nonni! Vi vogliamo bene!',
             'holi' => 'Buon Holi! Che la tua vita sia piena di colori!',
+            'new-year' => 'Felice anno nuovo! Ai nuovi inizi!',
         ],
 
         'success' => [
             'title' => 'Grazie!',
             'message' => 'La tua carta regalo del valore di :amount è stata inviata a :email.',
+            'next-steps' => 'Il destinatario riceve un\'email con il codice della carta regalo e può utilizzarlo al checkout.',
+            'buy-another' => 'Invia un\'Altra Carta Regalo',
             'continue-shopping' => 'Continua lo Shopping',
         ],
 

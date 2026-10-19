@@ -82,8 +82,9 @@ class GiftCardPurchase
     public function occasions(): array
     {
         return collect(config('giftcard.occasions', []))
-            ->map(fn ($image, $key) => [
+            ->map(fn ($occasion, $key) => [
                 'key' => $key,
+                'group' => $occasion['group'] ?? 'celebrations',
                 'name' => trans('giftcard::app.shop.occasions.'.$key),
                 'greeting' => trans('giftcard::app.shop.greetings.'.$key),
                 'image' => $this->occasionImageUrl($key),
@@ -97,7 +98,7 @@ class GiftCardPurchase
      */
     public function occasionImageUrl(?string $occasion): ?string
     {
-        $image = config('giftcard.occasions.'.$occasion);
+        $image = config('giftcard.occasions.'.$occasion.'.image');
 
         return $image ? asset('vendor/giftcard/images/'.$image) : null;
     }

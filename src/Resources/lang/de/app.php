@@ -132,6 +132,28 @@ return [
             'required' => 'Dieses Feld ist erforderlich.',
             'invalid-email' => 'Bitte geben Sie eine gültige E-Mail-Adresse ein.',
             'fix-errors' => 'Bitte korrigieren Sie die markierten Felder.',
+            'feature-email' => 'Sofortige Zustellung per E-Mail',
+            'feature-validity' => ':days Tage gültig',
+            'feature-redeem' => 'Bei jeder Bestellung an der Kasse einlösbar',
+            'step-occasion' => 'Anlass',
+            'step-details' => 'Personalisieren',
+            'step-payment' => 'Zahlung',
+            'filter-all' => 'Alle',
+            'filter-festivals' => 'Feste',
+            'filter-celebrations' => 'Feiern',
+            'filter-family' => 'Familie',
+            'change-occasion' => 'Anlass ändern',
+            'custom-amount' => 'Oder Betrag eingeben',
+            'recipient' => 'Empfänger',
+            'sender' => 'Von Ihnen',
+            'to' => 'An',
+            'from' => 'Von',
+            'message-placeholder' => 'Schreiben Sie ein paar Worte an den Empfänger',
+            'summary' => 'Bestellübersicht',
+            'card-value' => 'Wert der Geschenkkarte',
+            'total' => 'Gesamt',
+            'secure-note' => 'Sichere Zahlung mit PayPal. Sie werden erst belastet, nachdem Sie die Zahlung bestätigt haben.',
+            'sample-code' => 'XXXX-XXXX-XXXX-XXXX',
         ],
 
         'occasions' => [
@@ -159,6 +181,7 @@ return [
             'good-luck' => 'Viel Glück',
             'grandparents-day' => 'Großelterntag',
             'holi' => 'Holi',
+            'new-year' => 'Neujahr',
         ],
 
         'greetings' => [
@@ -186,11 +209,14 @@ return [
             'good-luck' => 'Viel Glück bei all deinen zukünftigen Vorhaben!',
             'grandparents-day' => 'Alles Gute zum Großelterntag! Wir haben euch lieb!',
             'holi' => 'Fröhliches Holi! Möge dein Leben voller Farben sein!',
+            'new-year' => 'Frohes neues Jahr! Auf einen neuen Anfang!',
         ],
 
         'success' => [
             'title' => 'Vielen Dank!',
             'message' => 'Ihre Geschenkkarte im Wert von :amount wurde an :email gesendet.',
+            'next-steps' => 'Der Empfänger erhält eine E-Mail mit dem Geschenkkartencode und kann ihn an der Kasse einlösen.',
+            'buy-another' => 'Weitere Geschenkkarte senden',
             'continue-shopping' => 'Weiter einkaufen',
         ],
 

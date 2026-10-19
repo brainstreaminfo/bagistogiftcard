@@ -132,6 +132,28 @@ return [
             'required' => 'Acest câmp este obligatoriu.',
             'invalid-email' => 'Introduceți o adresă de e-mail validă.',
             'fix-errors' => 'Corectați câmpurile evidențiate.',
+            'feature-email' => 'Livrat instantaneu prin e-mail',
+            'feature-validity' => 'Valabil :days zile',
+            'feature-redeem' => 'Utilizabil la orice comandă, la finalizarea comenzii',
+            'step-occasion' => 'Ocazie',
+            'step-details' => 'Personalizare',
+            'step-payment' => 'Plată',
+            'filter-all' => 'Toate',
+            'filter-festivals' => 'Sărbători',
+            'filter-celebrations' => 'Celebrări',
+            'filter-family' => 'Familie',
+            'change-occasion' => 'Schimbați Ocazia',
+            'custom-amount' => 'Sau introduceți o sumă',
+            'recipient' => 'Destinatar',
+            'sender' => 'De la Dvs.',
+            'to' => 'Către',
+            'from' => 'De la',
+            'message-placeholder' => 'Scrieți câteva cuvinte pentru destinatar',
+            'summary' => 'Sumarul Comenzii',
+            'card-value' => 'Valoarea cardului cadou',
+            'total' => 'Total',
+            'secure-note' => 'Plată securizată prin PayPal. Veți fi taxat doar după ce aprobați plata.',
+            'sample-code' => 'XXXX-XXXX-XXXX-XXXX',
         ],
 
         'occasions' => [
@@ -159,6 +181,7 @@ return [
             'good-luck' => 'Mult Noroc',
             'grandparents-day' => 'Ziua Bunicilor',
             'holi' => 'Holi',
+            'new-year' => 'Anul Nou',
         ],
 
         'greetings' => [
@@ -186,11 +209,14 @@ return [
             'good-luck' => 'Mult succes în toate proiectele tale viitoare!',
             'grandparents-day' => 'La mulți ani de Ziua Bunicilor! Vă iubim!',
             'holi' => 'Holi fericit! Fie ca viața ta să fie plină de culori!',
+            'new-year' => 'La mulți ani! Pentru noi începuturi!',
         ],
 
         'success' => [
             'title' => 'Vă Mulțumim!',
             'message' => 'Cardul dvs. cadou în valoare de :amount a fost trimis la :email.',
+            'next-steps' => 'Destinatarul primește un e-mail cu codul cardului cadou și îl poate folosi la finalizarea comenzii.',
+            'buy-another' => 'Trimiteți Alt Card Cadou',
             'continue-shopping' => 'Continuați Cumpărăturile',
         ],
 

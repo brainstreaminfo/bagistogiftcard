@@ -132,6 +132,28 @@ return [
             'required' => 'Kolom ini wajib diisi.',
             'invalid-email' => 'Masukkan alamat email yang valid.',
             'fix-errors' => 'Perbaiki kolom yang ditandai.',
+            'feature-email' => 'Dikirim langsung melalui email',
+            'feature-validity' => 'Berlaku selama :days hari',
+            'feature-redeem' => 'Tukarkan untuk pesanan apa pun saat checkout',
+            'step-occasion' => 'Acara',
+            'step-details' => 'Personalisasi',
+            'step-payment' => 'Pembayaran',
+            'filter-all' => 'Semua',
+            'filter-festivals' => 'Hari Raya',
+            'filter-celebrations' => 'Perayaan',
+            'filter-family' => 'Keluarga',
+            'change-occasion' => 'Ganti Acara',
+            'custom-amount' => 'Atau masukkan nominal',
+            'recipient' => 'Penerima',
+            'sender' => 'Dari Anda',
+            'to' => 'Untuk',
+            'from' => 'Dari',
+            'message-placeholder' => 'Tulis beberapa kata untuk penerima',
+            'summary' => 'Ringkasan Pesanan',
+            'card-value' => 'Nilai Kartu Hadiah',
+            'total' => 'Total',
+            'secure-note' => 'Pembayaran aman dengan PayPal. Anda hanya dikenakan biaya setelah menyetujui pembayaran.',
+            'sample-code' => 'XXXX-XXXX-XXXX-XXXX',
         ],
 
         'occasions' => [
@@ -159,6 +181,7 @@ return [
             'good-luck' => 'Semoga Sukses',
             'grandparents-day' => 'Hari Kakek dan Nenek',
             'holi' => 'Holi',
+            'new-year' => 'Tahun Baru',
         ],
 
         'greetings' => [
@@ -186,11 +209,14 @@ return [
             'good-luck' => 'Semoga sukses dalam semua usahamu ke depan!',
             'grandparents-day' => 'Selamat Hari Kakek dan Nenek! Kami sayang kalian!',
             'holi' => 'Selamat Holi! Semoga hidupmu penuh warna!',
+            'new-year' => 'Selamat Tahun Baru! Untuk awal yang baru!',
         ],
 
         'success' => [
             'title' => 'Terima Kasih!',
             'message' => 'Kartu hadiah senilai :amount telah dikirim ke :email.',
+            'next-steps' => 'Penerima akan mendapatkan email berisi kode kartu hadiah dan dapat menukarkannya saat checkout.',
+            'buy-another' => 'Kirim Kartu Hadiah Lain',
             'continue-shopping' => 'Lanjut Belanja',
         ],
 

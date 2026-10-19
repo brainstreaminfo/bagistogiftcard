@@ -132,6 +132,28 @@ return [
             'required' => 'هذا الحقل مطلوب.',
             'invalid-email' => 'يرجى إدخال بريد إلكتروني صالح.',
             'fix-errors' => 'يرجى تصحيح الحقول المميزة.',
+            'feature-email' => 'تُرسل فورًا عبر البريد الإلكتروني',
+            'feature-validity' => 'صالحة لمدة :days يومًا',
+            'feature-redeem' => 'استخدمها في أي طلب عند الدفع',
+            'step-occasion' => 'المناسبة',
+            'step-details' => 'التخصيص',
+            'step-payment' => 'الدفع',
+            'filter-all' => 'الكل',
+            'filter-festivals' => 'المهرجانات',
+            'filter-celebrations' => 'الاحتفالات',
+            'filter-family' => 'العائلة',
+            'change-occasion' => 'تغيير المناسبة',
+            'custom-amount' => 'أو أدخل مبلغًا',
+            'recipient' => 'المستلم',
+            'sender' => 'منك',
+            'to' => 'إلى',
+            'from' => 'من',
+            'message-placeholder' => 'اكتب بضع كلمات للمستلم',
+            'summary' => 'ملخص الطلب',
+            'card-value' => 'قيمة بطاقة الهدية',
+            'total' => 'الإجمالي',
+            'secure-note' => 'دفع آمن عبر PayPal. لن يتم خصم أي مبلغ إلا بعد موافقتك على الدفع.',
+            'sample-code' => 'XXXX-XXXX-XXXX-XXXX',
         ],
 
         'occasions' => [
@@ -159,6 +181,7 @@ return [
             'good-luck' => 'حظًا موفقًا',
             'grandparents-day' => 'يوم الأجداد',
             'holi' => 'هولي',
+            'new-year' => 'رأس السنة',
         ],
 
         'greetings' => [
@@ -186,11 +209,14 @@ return [
             'good-luck' => 'نتمنى لك التوفيق في جميع مساعيك المستقبلية!',
             'grandparents-day' => 'يوم أجداد سعيد! نحبكم!',
             'holi' => 'عيد هولي سعيد! نتمنى أن تمتلئ حياتك بالألوان!',
+            'new-year' => 'سنة جديدة سعيدة! نخب البدايات الجديدة!',
         ],
 
         'success' => [
             'title' => 'شكرًا لك!',
             'message' => 'تم إرسال بطاقة الهدية بقيمة :amount إلى :email.',
+            'next-steps' => 'يتلقى المستلم بريدًا إلكترونيًا يحتوي على رمز بطاقة الهدية ويمكنه استخدامه عند الدفع.',
+            'buy-another' => 'إرسال بطاقة هدية أخرى',
             'continue-shopping' => 'متابعة التسوق',
         ],
 

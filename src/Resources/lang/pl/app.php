@@ -132,6 +132,28 @@ return [
             'required' => 'To pole jest wymagane.',
             'invalid-email' => 'Podaj prawidłowy adres e-mail.',
             'fix-errors' => 'Popraw zaznaczone pola.',
+            'feature-email' => 'Natychmiastowa dostawa e-mailem',
+            'feature-validity' => 'Ważna przez :days dni',
+            'feature-redeem' => 'Do wykorzystania przy każdym zamówieniu w kasie',
+            'step-occasion' => 'Okazja',
+            'step-details' => 'Personalizacja',
+            'step-payment' => 'Płatność',
+            'filter-all' => 'Wszystkie',
+            'filter-festivals' => 'Święta',
+            'filter-celebrations' => 'Uroczystości',
+            'filter-family' => 'Rodzina',
+            'change-occasion' => 'Zmień okazję',
+            'custom-amount' => 'Lub wpisz kwotę',
+            'recipient' => 'Odbiorca',
+            'sender' => 'Od Ciebie',
+            'to' => 'Dla',
+            'from' => 'Od',
+            'message-placeholder' => 'Napisz kilka słów do odbiorcy',
+            'summary' => 'Podsumowanie zamówienia',
+            'card-value' => 'Wartość karty podarunkowej',
+            'total' => 'Razem',
+            'secure-note' => 'Bezpieczna płatność przez PayPal. Środki zostaną pobrane dopiero po zatwierdzeniu płatności.',
+            'sample-code' => 'XXXX-XXXX-XXXX-XXXX',
         ],
 
         'occasions' => [
@@ -159,6 +181,7 @@ return [
             'good-luck' => 'Powodzenia',
             'grandparents-day' => 'Dzień Babci i Dziadka',
             'holi' => 'Holi',
+            'new-year' => 'Nowy Rok',
         ],
 
         'greetings' => [
@@ -186,11 +209,14 @@ return [
             'good-luck' => 'Powodzenia we wszystkich przyszłych przedsięwzięciach!',
             'grandparents-day' => 'Wszystkiego najlepszego z okazji Dnia Babci i Dziadka! Kochamy Was!',
             'holi' => 'Szczęśliwego Holi! Niech Twoje życie będzie pełne kolorów!',
+            'new-year' => 'Szczęśliwego Nowego Roku! Za nowe początki!',
         ],
 
         'success' => [
             'title' => 'Dziękujemy!',
             'message' => 'Twoja karta podarunkowa o wartości :amount została wysłana na adres :email.',
+            'next-steps' => 'Odbiorca otrzyma e-mail z kodem karty podarunkowej i może go wykorzystać przy składaniu zamówienia.',
+            'buy-another' => 'Wyślij kolejną kartę podarunkową',
             'continue-shopping' => 'Kontynuuj zakupy',
         ],
 

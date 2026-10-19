@@ -1,28 +1,104 @@
 <?php
 
 return [
-    'welcome' => 'occasions/welcome.jpg',
-    'birthday' => 'occasions/birthday.jpg',
-    'christmas' => 'occasions/christmas.jpg',
-    'anniversary' => 'occasions/anniversary.jpg',
-    'pongal' => 'occasions/pongal.jpg',
-    'ramadan' => 'occasions/ramadan.jpg',
-    'diwali' => 'occasions/diwali.jpg',
-    'engagement' => 'occasions/engagement.jpg',
-    'farewell' => 'occasions/farewell.jpg',
-    'navratri' => 'occasions/navratri.jpg',
-    'rakshabandhan' => 'occasions/rakshabandhan.jpg',
-    'onam' => 'occasions/onam.jpg',
-    'fathers-day' => 'occasions/fathers-day.jpg',
-    'mothers-day' => 'occasions/mothers-day.jpg',
-    'congratulations' => 'occasions/congratulations.jpg',
-    'easter' => 'occasions/easter.jpg',
-    'best-mom' => 'occasions/best-mom.jpg',
-    'best-dad' => 'occasions/best-dad.jpg',
-    'bhai-dooj' => 'occasions/bhai-dooj.jpg',
-    'thank-you' => 'occasions/thank-you.jpg',
-    'valentines-day' => 'occasions/valentines-day.jpg',
-    'good-luck' => 'occasions/good-luck.jpg',
-    'grandparents-day' => 'occasions/grandparents-day.jpg',
-    'holi' => 'occasions/holi.jpg',
+    'welcome' => [
+        'image' => 'occasions/welcome.jpg',
+        'group' => 'celebrations',
+    ],
+    'birthday' => [
+        'image' => 'occasions/birthday.jpg',
+        'group' => 'celebrations',
+    ],
+    'christmas' => [
+        'image' => 'occasions/christmas.jpg',
+        'group' => 'festivals',
+    ],
+    'anniversary' => [
+        'image' => 'occasions/anniversary.jpg',
+        'group' => 'celebrations',
+    ],
+    'pongal' => [
+        'image' => 'occasions/pongal.jpg',
+        'group' => 'festivals',
+    ],
+    'ramadan' => [
+        'image' => 'occasions/ramadan.jpg',
+        'group' => 'festivals',
+    ],
+    'diwali' => [
+        'image' => 'occasions/diwali.jpg',
+        'group' => 'festivals',
+    ],
+    'engagement' => [
+        'image' => 'occasions/engagement.jpg',
+        'group' => 'celebrations',
+    ],
+    'farewell' => [
+        'image' => 'occasions/farewell.jpg',
+        'group' => 'celebrations',
+    ],
+    'navratri' => [
+        'image' => 'occasions/navratri.jpg',
+        'group' => 'festivals',
+    ],
+    'rakshabandhan' => [
+        'image' => 'occasions/rakshabandhan.jpg',
+        'group' => 'festivals',
+    ],
+    'onam' => [
+        'image' => 'occasions/onam.jpg',
+        'group' => 'festivals',
+    ],
+    'fathers-day' => [
+        'image' => 'occasions/fathers-day.jpg',
+        'group' => 'family',
+    ],
+    'mothers-day' => [
+        'image' => 'occasions/mothers-day.jpg',
+        'group' => 'family',
+    ],
+    'congratulations' => [
+        'image' => 'occasions/congratulations.jpg',
+        'group' => 'celebrations',
+    ],
+    'easter' => [
+        'image' => 'occasions/easter.jpg',
+        'group' => 'festivals',
+    ],
+    'best-mom' => [
+        'image' => 'occasions/best-mom.jpg',
+        'group' => 'family',
+    ],
+    'best-dad' => [
+        'image' => 'occasions/best-dad.jpg',
+        'group' => 'family',
+    ],
+    'bhai-dooj' => [
+        'image' => 'occasions/bhai-dooj.jpg',
+        'group' => 'festivals',
+    ],
+    'thank-you' => [
+        'image' => 'occasions/thank-you.jpg',
+        'group' => 'celebrations',
+    ],
+    'valentines-day' => [
+        'image' => 'occasions/valentines-day.jpg',
+        'group' => 'celebrations',
+    ],
+    'good-luck' => [
+        'image' => 'occasions/good-luck.jpg',
+        'group' => 'celebrations',
+    ],
+    'grandparents-day' => [
+        'image' => 'occasions/grandparents-day.jpg',
+        'group' => 'family',
+    ],
+    'holi' => [
+        'image' => 'occasions/holi.jpg',
+        'group' => 'festivals',
+    ],
+    'new-year' => [
+        'image' => 'occasions/new-year.jpg',
+        'group' => 'celebrations',
+    ],
 ];

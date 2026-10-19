@@ -132,6 +132,28 @@ return [
             'required' => 'Este campo é obrigatório.',
             'invalid-email' => 'Informe um endereço de e-mail válido.',
             'fix-errors' => 'Corrija os campos destacados.',
+            'feature-email' => 'Entregue na hora por e-mail',
+            'feature-validity' => 'Válido por :days dias',
+            'feature-redeem' => 'Use em qualquer pedido no checkout',
+            'step-occasion' => 'Ocasião',
+            'step-details' => 'Personalizar',
+            'step-payment' => 'Pagamento',
+            'filter-all' => 'Todas',
+            'filter-festivals' => 'Festividades',
+            'filter-celebrations' => 'Comemorações',
+            'filter-family' => 'Família',
+            'change-occasion' => 'Alterar Ocasião',
+            'custom-amount' => 'Ou informe um valor',
+            'recipient' => 'Destinatário',
+            'sender' => 'De Você',
+            'to' => 'Para',
+            'from' => 'De',
+            'message-placeholder' => 'Escreva algumas palavras para o destinatário',
+            'summary' => 'Resumo do Pedido',
+            'card-value' => 'Valor do vale-presente',
+            'total' => 'Total',
+            'secure-note' => 'Pagamento seguro com PayPal. Você só é cobrado depois de aprovar o pagamento.',
+            'sample-code' => 'XXXX-XXXX-XXXX-XXXX',
         ],
 
         'occasions' => [
@@ -159,6 +181,7 @@ return [
             'good-luck' => 'Boa Sorte',
             'grandparents-day' => 'Dia dos Avós',
             'holi' => 'Holi',
+            'new-year' => 'Ano Novo',
         ],
 
         'greetings' => [
@@ -186,11 +209,14 @@ return [
             'good-luck' => 'Boa sorte em todos os seus projetos futuros!',
             'grandparents-day' => 'Feliz Dia dos Avós! Amamos vocês!',
             'holi' => 'Feliz Holi! Que sua vida seja cheia de cores!',
+            'new-year' => 'Feliz Ano Novo! Um brinde aos novos começos!',
         ],
 
         'success' => [
             'title' => 'Obrigado!',
             'message' => 'Seu vale-presente no valor de :amount foi enviado para :email.',
+            'next-steps' => 'O destinatário recebe um e-mail com o código do vale-presente e pode usá-lo no checkout.',
+            'buy-another' => 'Enviar Outro Vale-Presente',
             'continue-shopping' => 'Continuar Comprando',
         ],
 
