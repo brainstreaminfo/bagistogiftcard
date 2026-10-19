@@ -137,7 +137,6 @@ return [
             'feature-redeem' => 'Bescanvia-la en qualsevol comanda en pagar',
             'step-occasion' => 'Ocasió',
             'step-details' => 'Personalitza',
-            'step-payment' => 'Pagament',
             'filter-all' => 'Totes',
             'filter-festivals' => 'Festivitats',
             'filter-celebrations' => 'Celebracions',

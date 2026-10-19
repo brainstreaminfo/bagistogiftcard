@@ -137,7 +137,6 @@ return [
             'feature-redeem' => 'Використовуйте під час оформлення будь-якого замовлення',
             'step-occasion' => 'Привід',
             'step-details' => 'Оформлення',
-            'step-payment' => 'Оплата',
             'filter-all' => 'Усі',
             'filter-festivals' => 'Свята',
             'filter-celebrations' => 'Урочистості',

@@ -137,7 +137,6 @@ return [
             'feature-redeem' => 'Ödeme sırasında tüm siparişlerde kullanılabilir',
             'step-occasion' => 'Özel Gün',
             'step-details' => 'Kişiselleştir',
-            'step-payment' => 'Ödeme',
             'filter-all' => 'Tümü',
             'filter-festivals' => 'Bayramlar',
             'filter-celebrations' => 'Kutlamalar',

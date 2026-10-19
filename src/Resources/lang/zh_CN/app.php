@@ -137,7 +137,6 @@ return [
             'feature-redeem' => '结账时可用于任意订单',
             'step-occasion' => '场合',
             'step-details' => '个性化',
-            'step-payment' => '支付',
             'filter-all' => '全部',
             'filter-festivals' => '节日',
             'filter-celebrations' => '庆典',

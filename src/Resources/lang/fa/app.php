@@ -137,7 +137,6 @@ return [
             'feature-redeem' => 'قابل استفاده در هر سفارش هنگام پرداخت',
             'step-occasion' => 'مناسبت',
             'step-details' => 'شخصی‌سازی',
-            'step-payment' => 'پرداخت',
             'filter-all' => 'همه',
             'filter-festivals' => 'جشنواره‌ها',
             'filter-celebrations' => 'جشن‌ها',

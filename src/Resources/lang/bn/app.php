@@ -137,7 +137,6 @@ return [
             'feature-redeem' => 'চেকআউটে যেকোনো অর্ডারে রিডিম করুন',
             'step-occasion' => 'উপলক্ষ',
             'step-details' => 'ব্যক্তিগতকরণ',
-            'step-payment' => 'পেমেন্ট',
             'filter-all' => 'সব',
             'filter-festivals' => 'উৎসব',
             'filter-celebrations' => 'উদযাপন',

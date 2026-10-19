@@ -137,7 +137,6 @@ return [
             'feature-redeem' => 'In te wisselen bij elke bestelling tijdens het afrekenen',
             'step-occasion' => 'Gelegenheid',
             'step-details' => 'Personaliseren',
-            'step-payment' => 'Betaling',
             'filter-all' => 'Alle',
             'filter-festivals' => 'Feestdagen',
             'filter-celebrations' => 'Vieringen',

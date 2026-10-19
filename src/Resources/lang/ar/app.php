@@ -137,7 +137,6 @@ return [
             'feature-redeem' => 'استخدمها في أي طلب عند الدفع',
             'step-occasion' => 'المناسبة',
             'step-details' => 'التخصيص',
-            'step-payment' => 'الدفع',
             'filter-all' => 'الكل',
             'filter-festivals' => 'المهرجانات',
             'filter-celebrations' => 'الاحتفالات',

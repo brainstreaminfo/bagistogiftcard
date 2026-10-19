@@ -137,7 +137,6 @@ return [
             'feature-redeem' => 'Utilizabil la orice comandă, la finalizarea comenzii',
             'step-occasion' => 'Ocazie',
             'step-details' => 'Personalizare',
-            'step-payment' => 'Plată',
             'filter-all' => 'Toate',
             'filter-festivals' => 'Sărbători',
             'filter-celebrations' => 'Celebrări',

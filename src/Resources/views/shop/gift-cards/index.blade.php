@@ -395,7 +395,6 @@
                             stepLabels: [
                                 @json(trans('giftcard::app.shop.purchase.step-occasion')),
                                 @json(trans('giftcard::app.shop.purchase.step-details')),
-                                @json(trans('giftcard::app.shop.purchase.step-payment')),
                             ],
 
                             filters: {
@@ -466,15 +465,11 @@
                         formattedAmount() {
                             return this.formatMoney(Number(this.form.amount) || 0);
                         },
-
-                        isFormComplete() {
-                            return Object.keys(this.validateForm()).length === 0;
-                        },
                     },
 
                     methods: {
                         stepClass(index) {
-                            let current = this.step === 'occasion' ? 0 : (this.isFormComplete ? 2 : 1);
+                            let current = this.step === 'occasion' ? 0 : 1;
 
                             return {
                                 'gc-step-active': index === current,

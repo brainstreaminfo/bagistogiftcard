@@ -137,7 +137,6 @@ return [
             'feature-redeem' => 'Do wykorzystania przy każdym zamówieniu w kasie',
             'step-occasion' => 'Okazja',
             'step-details' => 'Personalizacja',
-            'step-payment' => 'Płatność',
             'filter-all' => 'Wszystkie',
             'filter-festivals' => 'Święta',
             'filter-celebrations' => 'Uroczystości',

@@ -137,7 +137,6 @@ return [
             'feature-redeem' => 'Canjéala en cualquier pedido al pagar',
             'step-occasion' => 'Ocasión',
             'step-details' => 'Personalizar',
-            'step-payment' => 'Pago',
             'filter-all' => 'Todas',
             'filter-festivals' => 'Festividades',
             'filter-celebrations' => 'Celebraciones',

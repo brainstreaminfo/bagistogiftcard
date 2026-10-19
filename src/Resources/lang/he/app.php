@@ -137,7 +137,6 @@ return [
             'feature-redeem' => 'ניתן למימוש בכל הזמנה בקופה',
             'step-occasion' => 'אירוע',
             'step-details' => 'התאמה אישית',
-            'step-payment' => 'תשלום',
             'filter-all' => 'הכול',
             'filter-festivals' => 'חגים',
             'filter-celebrations' => 'חגיגות',

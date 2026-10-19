@@ -137,7 +137,6 @@ return [
             'feature-redeem' => 'Tukarkan untuk pesanan apa pun saat checkout',
             'step-occasion' => 'Acara',
             'step-details' => 'Personalisasi',
-            'step-payment' => 'Pembayaran',
             'filter-all' => 'Semua',
             'filter-festivals' => 'Hari Raya',
             'filter-celebrations' => 'Perayaan',

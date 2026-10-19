@@ -137,7 +137,6 @@ return [
             'feature-redeem' => 'चेकआउट पर किसी भी ऑर्डर पर रिडीम करें',
             'step-occasion' => 'अवसर',
             'step-details' => 'व्यक्तिगत बनाएं',
-            'step-payment' => 'भुगतान',
             'filter-all' => 'सभी',
             'filter-festivals' => 'त्योहार',
             'filter-celebrations' => 'उत्सव',

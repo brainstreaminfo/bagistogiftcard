@@ -137,7 +137,6 @@ return [
             'feature-redeem' => 'Utilizzabile su qualsiasi ordine al checkout',
             'step-occasion' => 'Occasione',
             'step-details' => 'Personalizza',
-            'step-payment' => 'Pagamento',
             'filter-all' => 'Tutte',
             'filter-festivals' => 'Festività',
             'filter-celebrations' => 'Celebrazioni',

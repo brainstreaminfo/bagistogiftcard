@@ -137,7 +137,6 @@ return [
             'feature-redeem' => 'ගෙවීමේදී ඕනෑම ඇණවුමකට භාවිත කරන්න',
             'step-occasion' => 'අවස්ථාව',
             'step-details' => 'පුද්ගලීකරණය',
-            'step-payment' => 'ගෙවීම',
             'filter-all' => 'සියල්ල',
             'filter-festivals' => 'උත්සව',
             'filter-celebrations' => 'සැමරුම්',

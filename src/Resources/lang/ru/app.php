@@ -137,7 +137,6 @@ return [
             'feature-redeem' => 'Используйте при оформлении любого заказа',
             'step-occasion' => 'Повод',
             'step-details' => 'Оформление',
-            'step-payment' => 'Оплата',
             'filter-all' => 'Все',
             'filter-festivals' => 'Праздники',
             'filter-celebrations' => 'Торжества',

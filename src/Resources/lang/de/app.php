@@ -137,7 +137,6 @@ return [
             'feature-redeem' => 'Bei jeder Bestellung an der Kasse einlösbar',
             'step-occasion' => 'Anlass',
             'step-details' => 'Personalisieren',
-            'step-payment' => 'Zahlung',
             'filter-all' => 'Alle',
             'filter-festivals' => 'Feste',
             'filter-celebrations' => 'Feiern',

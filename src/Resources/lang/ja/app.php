@@ -137,7 +137,6 @@ return [
             'feature-redeem' => 'チェックアウト時にどのご注文にも利用可能',
             'step-occasion' => 'シーン',
             'step-details' => 'カスタマイズ',
-            'step-payment' => 'お支払い',
             'filter-all' => 'すべて',
             'filter-festivals' => 'お祭り・祝祭日',
             'filter-celebrations' => 'お祝い',
