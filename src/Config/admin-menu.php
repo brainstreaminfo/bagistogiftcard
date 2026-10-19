@@ -1,35 +1,29 @@
 <?php
 
 return [
-   /**
-     * Giftcard.
-    */
     [
-        'key'        => 'giftcard',
-        'name'       => 'Giftcard',
-        'route'      => 'admin.giftcard.index',
-        'sort'       => 10,
-        'icon'       => 'icon-sales',
+        'key' => 'giftcard',
+        'name' => 'giftcard::app.admin.menu.title',
+        'route' => 'admin.gift_cards.index',
+        'sort' => 4,
+        'icon' => 'icon-sales',
     ], [
-        'key'        => 'giftcard.giftcards',
-        'name'       => 'Giftcards',
-        'route'      => 'admin.giftcard.index',
-        'sort'       => 1,
-        'parent'     => 'giftcard',
-        'icon'       => '',
-    ],[
-        'key'        => 'giftcard.payments',
-        'name'       => 'Giftcard Payment',
-        'route'      => 'admin.giftcard.payment',
-        'sort'       => 2,
-        'parent'     => 'giftcard',
-        'icon'       => '',
-    ],[
-        'key'        => 'giftcard.balances',
-        'name'       => 'Giftcard Balances',
-        'route'      => 'admin.giftcard.balance',
-        'sort'       => 3,
-        'parent'     => 'giftcard',
-        'icon'       => '',
+        'key' => 'giftcard.gift_cards',
+        'name' => 'giftcard::app.admin.menu.gift-cards',
+        'route' => 'admin.gift_cards.index',
+        'sort' => 1,
+        'icon' => '',
+    ], [
+        'key' => 'giftcard.payments',
+        'name' => 'giftcard::app.admin.menu.payments',
+        'route' => 'admin.gift_cards.payments.index',
+        'sort' => 2,
+        'icon' => '',
+    ], [
+        'key' => 'giftcard.balances',
+        'name' => 'giftcard::app.admin.menu.balances',
+        'route' => 'admin.gift_cards.balances.index',
+        'sort' => 3,
+        'icon' => '',
     ],
 ];

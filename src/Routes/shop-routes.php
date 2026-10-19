@@ -1,26 +1,31 @@
 <?php
 
+use Brainstream\Giftcard\Http\Controllers\Shop\CartGiftCardController;
+use Brainstream\Giftcard\Http\Controllers\Shop\PurchaseController;
 use Illuminate\Support\Facades\Route;
-use Brainstream\Giftcard\Http\Controllers\Shop\GiftcardController;
-use Brainstream\Giftcard\Http\Controllers\Customer\Account\OrderController;
 
-Route::group(['middleware' => ['web', 'theme', 'locale', 'currency'], 'prefix' => 'giftcard'], function () {
-    Route::get('', [GiftcardController::class, 'index'])->name('shop.giftcard.index');
+Route::group(['middleware' => ['web', 'shop']], function () {
+    Route::controller(PurchaseController::class)->prefix('gift-cards')->group(function () {
+        Route::get('', 'index')->name('shop.gift_cards.index');
 
-    Route::get('success', [GiftcardController::class, 'success'])->name('shop.giftcard.success');
+        Route::get('success', 'success')->name('shop.gift_cards.success');
 
-    Route::post('purchase', [GiftcardController::class, 'purchase'])->name('shop.api.gift-cards.purchase');
+        Route::post('paypal/create-order', 'createOrder')
+            ->middleware('throttle:10,1')
+            ->name('shop.gift_cards.paypal.create_order');
 
-    Route::post('store-payment-method', [GiftcardController::class, 'storePaymentMethod'])->name('shop.giftcard.store-payment-method');
-    
-    Route::post('placeorder', [GiftcardController::class, 'placeOrder'])->name('shop.api.gift-cards.placeorder');
+        Route::post('paypal/capture-order', 'captureOrder')
+            ->middleware('throttle:10,1')
+            ->name('shop.gift_cards.paypal.capture_order');
+    });
 
-    Route::post('checkstatus', [GiftcardController::class, 'checkstatusGiftcard'])->name('shop.api.checkout.cart.giftcard.checkstatus');
-    Route::post('activate', [GiftcardController::class, 'activateGiftcard'])->name('shop.api.checkout.cart.giftcard.activate');
-    Route::delete('remove', [GiftcardController::class, 'destroyGiftcard'])->name('shop.api.checkout.cart.giftcard.remove');
+    Route::controller(CartGiftCardController::class)->prefix('api/checkout/cart/gift-card')->group(function () {
+        Route::get('', 'show')->name('shop.api.checkout.cart.gift_card.show');
 
-});
+        Route::post('', 'store')
+            ->middleware('throttle:10,1')
+            ->name('shop.api.checkout.cart.gift_card.store');
 
-Route::group(['middleware' => ['web', 'customer']], function () {
-    Route::post('customer/orders/cancel/{id}', [OrderController::class, 'cancel'])->name('shop.customers.account.orders.cancel');
+        Route::delete('', 'destroy')->name('shop.api.checkout.cart.gift_card.destroy');
+    });
 });

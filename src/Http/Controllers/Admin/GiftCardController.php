@@ -2,205 +2,146 @@
 
 namespace Brainstream\Giftcard\Http\Controllers\Admin;
 
-use Illuminate\Http\JsonResponse;
-use Brainstream\Giftcard\DataGrids\GiftCard\GiftCardBalanceDataGrid;
-use Brainstream\Giftcard\DataGrids\GiftCard\GiftCardDataGrid;
-use Brainstream\Giftcard\DataGrids\GiftCard\GiftCardPaymentDataGrid; 
-use Brainstream\Giftcard\Http\Controllers\Controller;
-use Illuminate\Support\Str;
-use Brainstream\Giftcard\Models\GiftCard;
+use Brainstream\Giftcard\Contracts\GiftCard;
+use Brainstream\Giftcard\DataGrids\GiftCardBalanceDataGrid;
+use Brainstream\Giftcard\DataGrids\GiftCardDataGrid;
+use Brainstream\Giftcard\DataGrids\GiftCardPaymentDataGrid;
+use Brainstream\Giftcard\Http\Requests\GiftCardRequest;
+use Brainstream\Giftcard\Mail\GiftCardMail;
 use Brainstream\Giftcard\Repositories\GiftCardRepository;
+use Illuminate\Http\JsonResponse;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\View\View;
+use Webkul\Admin\Http\Controllers\Controller;
 
 class GiftCardController extends Controller
 {
-    protected $giftCardRepository;
-
-    public function __construct(GiftCardRepository $giftCardRepository)
-    {
-        $this->giftCardRepository = $giftCardRepository;
-    }
+    /**
+     * Create a new controller instance.
+     */
+    public function __construct(protected GiftCardRepository $giftCardRepository) {}
 
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\View\View
+     * Display the gift card listing.
      */
-    public function index()
+    public function index(): View|JsonResponse
     {
         if (request()->ajax()) {
-            return app(GiftCardDataGrid::class)->toJson();
+            return datagrid(GiftCardDataGrid::class)->process();
         }
 
-        return view('giftcard::admin.index');
+        return view('giftcard::admin.gift-cards.index');
     }
 
     /**
-     * Display the payment details of giftcard purchase.
-    */
-    public function payments()
+     * Display the gift card purchase payments.
+     */
+    public function payments(): View|JsonResponse
     {
         if (request()->ajax()) {
-            return app(GiftCardPaymentDataGrid::class)->toJson();
+            return datagrid(GiftCardPaymentDataGrid::class)->process();
         }
 
-        return view('giftcard::admin.payment');
+        return view('giftcard::admin.payments.index');
     }
 
     /**
-     * Display the giftcard details ofused or unused.
-    */
-    public function balances()
+     * Display the gift card balances.
+     */
+    public function balances(): View|JsonResponse
     {
         if (request()->ajax()) {
-            return app(GiftCardBalanceDataGrid::class)->toJson();
+            return datagrid(GiftCardBalanceDataGrid::class)->process();
         }
 
-        return view('giftcard::admin.balance');
+        return view('giftcard::admin.balances.index');
     }
 
     /**
-     * Store a newly created resource in storage.
-     *
-     * @return \Illuminate\Http\Response
+     * Issue one or more gift cards.
      */
-
-    public function store(): JsonResponse
+    public function store(GiftCardRequest $request): JsonResponse
     {
-        // Set creation date to today's date
-        $creationDate = now()->toDateString();
-        request()->merge(['creationdate' => $creationDate]);
-
-        $this->validate(request(), [
-            'giftcard_amount' => 'required|numeric',
-            'giftcard_quantity' => 'required|integer|min:1|max:5',
-            'creationdate' => 'required|date',
-            'expirationdate' => 'required|date|after_or_equal:today',
-            'giftcard_status' => 'required',  
-        ]);
-
-        $quantity = request('giftcard_quantity');
-
-        // Initialize an array to store generated gift card numbers
-        $giftcardNumbers = [];
-
-        // Generate unique gift card numbers based on the provided quantity
-        for ($i = 0; $i < $quantity; $i++) {
-            // Generate a unique gift card number
-            $giftcardNumber = $this->generateUniqueGiftCardNumber();
-
-            // Add the generated gift card number to the array
-            $giftcardNumbers[] = $giftcardNumber;
-        }
-
-        // Create separate gift card entries for each generated gift card number
-        foreach ($giftcardNumbers as $giftcardNumber) {
-            // Calculate the number of days remaining from the current date to the expiration date
-            $expirationDate = \Carbon\Carbon::parse(request('expirationdate'));
-            $currentDate = \Carbon\Carbon::now();
-            $expireInDays = $currentDate->diffInDays($expirationDate, false); // Set to false to get negative days
-
-            $this->giftCardRepository->create(array_merge(request()->only([
-                'giftcard_amount',
-                'creationdate',
-                'expirationdate',
-                'giftcard_status',
-                'sendername',
-            ]),[
-                'giftcard_number' => $giftcardNumber,
-                'expirein' => $expireInDays, // Store the number of days remaining in the database
-            ]));
-        }
-
-        return new JsonResponse([
-            'message' => trans('admin::app.settings.giftcard.index.create-success'),
-        ]);
-    }
-
-    /**
-     * Generate a unique 16-digit gift card number
-     *
-     * @return string
-     */
-    private function generateUniqueGiftCardNumber()
-    {
-        do {
-            // Generate a random string of characters
-            $randomString = Str::upper(Str::random(16));
-
-            // Format the string into groups of four separated by dashes
-            $code = implode('-', str_split($randomString, 4));
-
-            // Check if the code already exists in the database
-            $exists = GiftCard::where('giftcard_number', $code)->exists();
-        } while ($exists);
-
-        return $code;
-    }
-
-    /**
-     * Giftcard Details
-     */
-    public function edit(int $id): JsonResponse
-    {
-
-        $giftcard = $this->giftCardRepository->findOrFail($id);
-        return new JsonResponse($giftcard);
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(): JsonResponse
-    {
-        $id = request('id');
-
-        $this->validate(request(), [
-            'giftcard_amount' => 'required|numeric',
-            'expirationdate' => 'required|date',
-            'sendername' => 'required',
-            'giftcard_status' => 'required',  
-        ]);
-
-        // Update the gift card using the repository
-        $this->giftCardRepository->update(request()->only([
+        $attributes = $request->only([
             'giftcard_amount',
             'expirationdate',
             'giftcard_status',
-            'sendername',
-        ]), $id);
+            'recipientname',
+            'recipientemail',
+            'message',
+        ]);
 
-        // The repository should handle saving the updated data, no need to fetch and save again
+        $attributes['sendername'] = core()->getCurrentChannel()->name;
+
+        $attributes['senderemail'] = core()->getSenderEmailDetails()['email'] ?? null;
+
+        for ($i = 0; $i < (int) $request->input('quantity'); $i++) {
+            $giftCard = $this->giftCardRepository->create($attributes);
+
+            if ($giftCard->recipientemail) {
+                $this->sendGiftCardMail($giftCard);
+            }
+        }
+
         return new JsonResponse([
-            'message' => trans('admin::app.settings.giftcard.index.update-success'),
+            'message' => trans('giftcard::app.admin.gift-cards.create-success'),
         ]);
     }
 
+    /**
+     * Return a gift card for the edit form.
+     */
+    public function edit(int $id): JsonResponse
+    {
+        $giftCard = $this->giftCardRepository->findOrFail($id);
+
+        return new JsonResponse(array_merge($giftCard->toArray(), [
+            'expirationdate' => $giftCard->expirationdate?->toDateString(),
+        ]));
+    }
 
     /**
-     * Remove the specified resource from storage.
+     * Update a gift card.
      */
-    public function destroy(int $id): JsonResponse
+    public function update(GiftCardRequest $request, int $id): JsonResponse
     {
         $this->giftCardRepository->findOrFail($id);
 
-        if ($this->giftCardRepository->count() == 1) {
-            return new JsonResponse([
-                'message' => trans('admin::app.settings.giftcard.index.last-delete-error'),
-            ], 400);
-        }
+        $this->giftCardRepository->update($request->only([
+            'giftcard_amount',
+            'expirationdate',
+            'giftcard_status',
+            'recipientname',
+            'recipientemail',
+            'message',
+        ]), $id);
 
+        return new JsonResponse([
+            'message' => trans('giftcard::app.admin.gift-cards.update-success'),
+        ]);
+    }
+
+    /**
+     * Delete a gift card.
+     */
+    public function destroy(int $id): JsonResponse
+    {
+        $this->giftCardRepository->delete($id);
+
+        return new JsonResponse([
+            'message' => trans('giftcard::app.admin.gift-cards.delete-success'),
+        ]);
+    }
+
+    /**
+     * Email a gift card to its recipient without failing the request.
+     */
+    protected function sendGiftCardMail(GiftCard $giftCard): void
+    {
         try {
-            $this->giftCardRepository->delete($id);
-
-            return new JsonResponse([
-                'message' => trans('admin::app.settings.giftcard.index.delete-success'),
-            ], 200);
+            Mail::send(new GiftCardMail($giftCard));
         } catch (\Exception $e) {
             report($e);
         }
-
-        return new JsonResponse([
-            'message' => trans('admin::app.settings.giftcard.index.delete-failed'),
-        ], 500);
     }
 }

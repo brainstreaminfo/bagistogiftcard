@@ -4,18 +4,16 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateGiftCardsTable extends Migration
+return new class extends Migration
 {
     /**
      * Run the migrations.
-     *
-     * @return void
      */
-    public function up()
+    public function up(): void
     {
         Schema::create('gift_cards', function (Blueprint $table) {
             $table->id();
-            $table->string('giftcard_number', 100)->index();
+            $table->string('giftcard_number', 100)->unique();
             $table->decimal('giftcard_amount', 10, 0);
             $table->date('expirationdate');
             $table->string('expirein', 190);
@@ -32,11 +30,9 @@ class CreateGiftCardsTable extends Migration
 
     /**
      * Reverse the migrations.
-     *
-     * @return void
      */
-    public function down()
+    public function down(): void
     {
         Schema::dropIfExists('gift_cards');
     }
-}
+};

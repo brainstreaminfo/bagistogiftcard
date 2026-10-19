@@ -1,0 +1,28 @@
+<?php
+
+return [
+    'welcome' => 'occasions/welcome.jpg',
+    'birthday' => 'occasions/birthday.jpg',
+    'christmas' => 'occasions/christmas.jpg',
+    'anniversary' => 'occasions/anniversary.jpg',
+    'pongal' => 'occasions/pongal.jpg',
+    'ramadan' => 'occasions/ramadan.jpg',
+    'diwali' => 'occasions/diwali.jpg',
+    'engagement' => 'occasions/engagement.jpg',
+    'farewell' => 'occasions/farewell.jpg',
+    'navratri' => 'occasions/navratri.jpg',
+    'rakshabandhan' => 'occasions/rakshabandhan.jpg',
+    'onam' => 'occasions/onam.jpg',
+    'fathers-day' => 'occasions/fathers-day.jpg',
+    'mothers-day' => 'occasions/mothers-day.jpg',
+    'congratulations' => 'occasions/congratulations.jpg',
+    'easter' => 'occasions/easter.jpg',
+    'best-mom' => 'occasions/best-mom.jpg',
+    'best-dad' => 'occasions/best-dad.jpg',
+    'bhai-dooj' => 'occasions/bhai-dooj.jpg',
+    'thank-you' => 'occasions/thank-you.jpg',
+    'valentines-day' => 'occasions/valentines-day.jpg',
+    'good-luck' => 'occasions/good-luck.jpg',
+    'grandparents-day' => 'occasions/grandparents-day.jpg',
+    'holi' => 'occasions/holi.jpg',
+];

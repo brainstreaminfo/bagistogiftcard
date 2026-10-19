@@ -1,0 +1,227 @@
+<?php
+
+return [
+    'admin' => [
+        'menu' => [
+            'title' => 'Kartu Hadiah',
+            'gift-cards' => 'Kartu Hadiah',
+            'payments' => 'Pembayaran',
+            'balances' => 'Saldo',
+        ],
+
+        'acl' => [
+            'title' => 'Kartu Hadiah',
+            'gift-cards' => 'Kartu Hadiah',
+            'create' => 'Buat',
+            'edit' => 'Ubah',
+            'delete' => 'Hapus',
+            'payments' => 'Pembayaran',
+            'balances' => 'Saldo',
+        ],
+
+        'gift-cards' => [
+            'title' => 'Kartu Hadiah',
+            'create-btn' => 'Buat Kartu Hadiah',
+            'create-success' => 'Kartu hadiah berhasil dibuat.',
+            'update-success' => 'Kartu hadiah berhasil diperbarui.',
+            'delete-success' => 'Kartu hadiah berhasil dihapus.',
+
+            'datagrid' => [
+                'id' => 'ID',
+                'code' => 'Kode',
+                'balance' => 'Saldo',
+                'recipient' => 'Penerima',
+                'status' => 'Status',
+                'active' => 'Aktif',
+                'inactive' => 'Tidak Aktif',
+                'created-on' => 'Dibuat Pada',
+                'expires-on' => 'Berlaku Hingga',
+                'edit' => 'Ubah',
+                'delete' => 'Hapus',
+            ],
+
+            'form' => [
+                'create-title' => 'Buat Kartu Hadiah',
+                'edit-title' => 'Ubah Kartu Hadiah',
+                'code' => 'Kode',
+                'amount' => 'Saldo (:currency)',
+                'quantity' => 'Jumlah',
+                'expires-on' => 'Berlaku Hingga',
+                'status' => 'Status',
+                'recipient-name' => 'Nama Penerima',
+                'recipient-email' => 'Email Penerima',
+                'message' => 'Pesan',
+                'email-note' => 'Jika email penerima diisi, setiap kartu hadiah akan dikirim ke penerima melalui email.',
+                'save-btn' => 'Simpan Kartu Hadiah',
+            ],
+        ],
+
+        'payments' => [
+            'title' => 'Pembayaran Kartu Hadiah',
+
+            'datagrid' => [
+                'id' => 'ID',
+                'code' => 'Kode Kartu Hadiah',
+                'transaction-id' => 'ID Transaksi',
+                'payer-email' => 'Email Pembayar',
+                'amount' => 'Nominal',
+                'method' => 'Metode',
+                'status' => 'Status',
+                'paid-at' => 'Dibayar Pada',
+            ],
+        ],
+
+        'balances' => [
+            'title' => 'Saldo Kartu Hadiah',
+
+            'datagrid' => [
+                'id' => 'ID',
+                'code' => 'Kode Kartu Hadiah',
+                'total' => 'Nilai Total',
+                'used' => 'Terpakai',
+                'remaining' => 'Sisa',
+                'updated-at' => 'Diperbarui Pada',
+            ],
+        ],
+
+        'sales' => [
+            'gift-card' => 'Kartu Hadiah',
+            'gift-card-code' => 'Kode Kartu Hadiah',
+        ],
+
+        'configuration' => [
+            'title' => 'Kartu Hadiah',
+            'info' => 'Atur pembelian kartu hadiah di etalase toko.',
+
+            'settings' => [
+                'title' => 'Pengaturan',
+                'info' => 'Aktifkan pembelian kartu hadiah dan tetapkan nominal yang dapat dibeli pelanggan.',
+                'active' => 'Izinkan Pembelian Kartu Hadiah',
+                'min-amount' => 'Nominal Minimum',
+                'max-amount' => 'Nominal Maksimum',
+                'preset-amounts' => 'Nominal Pilihan',
+                'preset-amounts-info' => 'Nominal yang dipisahkan koma sebagai pilihan cepat, misalnya 25,50,100.',
+                'validity-days' => 'Masa Berlaku (Hari)',
+            ],
+        ],
+    ],
+
+    'shop' => [
+        'header-link' => 'Kartu Hadiah',
+
+        'purchase' => [
+            'title' => 'Kartu Hadiah',
+            'description' => 'Kirim kartu hadiah melalui email untuk setiap momen.',
+            'choose-occasion' => 'Pilih Momen',
+            'details' => 'Detail Kartu Hadiah',
+            'amount' => 'Nominal (:currency)',
+            'amount-range' => 'Masukkan nominal antara :min dan :max.',
+            'recipient-name' => 'Nama Penerima',
+            'recipient-email' => 'Email Penerima',
+            'sender-name' => 'Nama Anda',
+            'sender-email' => 'Email Anda',
+            'message' => 'Pesan Pribadi',
+            'preview' => 'Pratinjau',
+            'back' => 'Kembali',
+            'next' => 'Berikutnya',
+            'pay' => 'Bayar dengan PayPal',
+            'unavailable' => 'Kartu hadiah saat ini tidak dapat dibeli.',
+            'currency-unsupported' => 'Kartu hadiah tidak dapat dibayar dalam :currency.',
+            'payment-failed' => 'Pembayaran tidak dapat diselesaikan. Anda tidak dikenakan biaya.',
+            'session-expired' => 'Detail kartu hadiah Anda telah kedaluwarsa. Silakan isi formulir kembali.',
+            'required' => 'Kolom ini wajib diisi.',
+            'invalid-email' => 'Masukkan alamat email yang valid.',
+            'fix-errors' => 'Perbaiki kolom yang ditandai.',
+        ],
+
+        'occasions' => [
+            'welcome' => 'Selamat Datang',
+            'birthday' => 'Ulang Tahun',
+            'christmas' => 'Natal',
+            'anniversary' => 'Hari Jadi',
+            'pongal' => 'Pongal',
+            'ramadan' => 'Ramadan',
+            'diwali' => 'Diwali',
+            'engagement' => 'Pertunangan',
+            'farewell' => 'Perpisahan',
+            'navratri' => 'Navratri',
+            'rakshabandhan' => 'Raksha Bandhan',
+            'onam' => 'Onam',
+            'fathers-day' => 'Hari Ayah',
+            'mothers-day' => 'Hari Ibu',
+            'congratulations' => 'Selamat',
+            'easter' => 'Paskah',
+            'best-mom' => 'Ibu Terbaik',
+            'best-dad' => 'Ayah Terbaik',
+            'bhai-dooj' => 'Bhai Dooj',
+            'thank-you' => 'Terima Kasih',
+            'valentines-day' => 'Hari Valentine',
+            'good-luck' => 'Semoga Sukses',
+            'grandparents-day' => 'Hari Kakek dan Nenek',
+            'holi' => 'Holi',
+        ],
+
+        'greetings' => [
+            'welcome' => 'Selamat datang di komunitas kami!',
+            'birthday' => 'Selamat ulang tahun! Nikmati hari istimewamu!',
+            'christmas' => 'Selamat Natal! Semoga penuh sukacita dan kebahagiaan!',
+            'anniversary' => 'Selamat hari jadi! Semoga langgeng hingga bertahun-tahun ke depan!',
+            'pongal' => 'Selamat Pongal! Nikmati musim perayaannya!',
+            'ramadan' => 'Ramadan Mubarak! Semoga puasamu lancar dan penuh berkah!',
+            'diwali' => 'Selamat Diwali! Semoga hidupmu dipenuhi cahaya dan kebahagiaan!',
+            'engagement' => 'Selamat atas pertunanganmu!',
+            'farewell' => 'Selamat jalan dan semoga sukses di masa depan!',
+            'navratri' => 'Selamat Navratri! Semoga kamu selalu sehat dan bahagia!',
+            'rakshabandhan' => 'Selamat Raksha Bandhan! Merayakan ikatan kasih sayang!',
+            'onam' => 'Selamat Onam! Semoga tahun depan penuh sukacita dan kemakmuran!',
+            'fathers-day' => 'Selamat Hari Ayah! Terima kasih untuk segalanya!',
+            'mothers-day' => 'Selamat Hari Ibu! Ibu adalah yang terbaik!',
+            'congratulations' => 'Selamat atas pencapaianmu!',
+            'easter' => 'Selamat Paskah! Semoga liburanmu penuh sukacita dan berkah!',
+            'best-mom' => 'Ibu adalah ibu terbaik!',
+            'best-dad' => 'Ayah adalah ayah terbaik!',
+            'bhai-dooj' => 'Selamat Bhai Dooj! Merayakan ikatan persaudaraan!',
+            'thank-you' => 'Terima kasih untuk segalanya!',
+            'valentines-day' => 'Selamat Hari Valentine! Kukirimkan seluruh cintaku untukmu!',
+            'good-luck' => 'Semoga sukses dalam semua usahamu ke depan!',
+            'grandparents-day' => 'Selamat Hari Kakek dan Nenek! Kami sayang kalian!',
+            'holi' => 'Selamat Holi! Semoga hidupmu penuh warna!',
+        ],
+
+        'success' => [
+            'title' => 'Terima Kasih!',
+            'message' => 'Kartu hadiah senilai :amount telah dikirim ke :email.',
+            'continue-shopping' => 'Lanjut Belanja',
+        ],
+
+        'checkout' => [
+            'title' => 'Kartu Hadiah',
+            'placeholder' => 'Masukkan kode kartu hadiah',
+            'apply' => 'Terapkan',
+            'remove' => 'Hapus',
+            'applied' => 'Kartu Hadiah (:code)',
+            'remaining' => 'Sisa saldo setelah pesanan ini: :amount',
+            'apply-success' => 'Kartu hadiah berhasil diterapkan.',
+            'remove-success' => 'Kartu hadiah berhasil dihapus.',
+            'invalid' => 'Kartu hadiah ini tidak valid, sudah kedaluwarsa, atau saldonya habis.',
+            'cart-not-found' => 'Keranjang Anda kosong.',
+            'insufficient-balance' => 'Saldo kartu hadiah telah berubah. Silakan periksa pesanan Anda dan coba lagi.',
+        ],
+
+        'order' => [
+            'gift-card' => 'Kartu Hadiah (:code)',
+        ],
+    ],
+
+    'emails' => [
+        'gift-card' => [
+            'subject' => ':sender mengirimkan kartu hadiah untuk Anda',
+            'greeting' => 'Halo :name,',
+            'intro' => ':sender mengirimkan kartu hadiah senilai :amount untuk Anda.',
+            'code' => 'Kode kartu hadiah Anda',
+            'expires' => 'Berlaku hingga :date',
+            'redeem' => 'Masukkan kode ini di kolom kartu hadiah saat checkout untuk menggunakannya.',
+            'shop-now' => 'Belanja Sekarang',
+        ],
+    ],
+];

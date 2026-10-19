@@ -2,12 +2,29 @@
 
 namespace Brainstream\Giftcard\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Brainstream\Giftcard\Contracts\GiftCard as GiftCardContract;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
-class GiftCard extends Model
+class GiftCard extends Model implements GiftCardContract
 {
-    use HasFactory;
+    /**
+     * Status of a gift card that can be redeemed.
+     */
+    public const STATUS_ACTIVE = '1';
+
+    /**
+     * Status of a gift card that has been switched off.
+     */
+    public const STATUS_INACTIVE = '0';
+
+    /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = 'gift_cards';
 
     /**
      * The attributes that are mass assignable.
@@ -26,25 +43,51 @@ class GiftCard extends Model
         'recipientname',
         'recipientemail',
         'message',
+        'occasion',
     ];
 
-    protected $dates = ['expirationdate'];
+    /**
+     * The attributes that should be cast.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'giftcard_amount' => 'float',
+        'creationdate' => 'date',
+        'expirationdate' => 'date',
+    ];
 
-    protected static function boot()
+    /**
+     * Get the balance summary of the gift card.
+     */
+    public function balance(): HasOne
     {
-        parent::boot();
-
-        static::created(function ($giftCard) {
-            
-            // Assuming the initial amount used is 0
-            $initialBalance = $giftCard->giftcard_amount;
-            GiftCardBalance::create([
-                'giftcard_number' => $giftCard->giftcard_number,
-                'giftcard_amount' => $initialBalance,
-                'used_giftcard_amount' => 0.00,
-                'remaining_giftcard_amount' => $initialBalance,
-            ]);
-        });
+        return $this->hasOne(GiftCardBalanceProxy::modelClass(), 'giftcard_number', 'giftcard_number');
     }
 
+    /**
+     * Get the payments made to purchase the gift card.
+     */
+    public function payments(): HasMany
+    {
+        return $this->hasMany(GiftCardPaymentProxy::modelClass(), 'giftcard_number', 'giftcard_number');
+    }
+
+    /**
+     * Determine whether the gift card is past its expiration date.
+     */
+    public function isExpired(): bool
+    {
+        return $this->expirationdate->endOfDay()->isPast();
+    }
+
+    /**
+     * Determine whether the gift card can be applied to a cart.
+     */
+    public function isRedeemable(): bool
+    {
+        return (string) $this->giftcard_status === self::STATUS_ACTIVE
+            && ! $this->isExpired()
+            && $this->giftcard_amount > 0;
+    }
 }

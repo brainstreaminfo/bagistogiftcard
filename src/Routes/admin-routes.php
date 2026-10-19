@@ -1,22 +1,26 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use Brainstream\Giftcard\Http\Controllers\Admin\GiftCardController;
+use Illuminate\Support\Facades\Route;
+use Webkul\Core\Http\Middleware\NoCacheMiddleware;
 
-Route::group(['middleware' => ['web', 'admin'], 'prefix' => 'admin/giftcard'], function () {
+Route::group([
+    'middleware' => ['web', 'admin', NoCacheMiddleware::class],
+    'prefix' => config('app.admin_url').'/gift-cards',
+], function () {
     Route::controller(GiftCardController::class)->group(function () {
-        Route::get('', 'index')->name('admin.giftcard.index');
+        Route::get('', 'index')->name('admin.gift_cards.index');
 
-        Route::post('create', 'store')->name('admin.giftcard.store');
+        Route::post('', 'store')->name('admin.gift_cards.store');
 
-        Route::get('edit/{id}', 'edit')->name('admin.giftcard.edit'); 
+        Route::get('payments', 'payments')->name('admin.gift_cards.payments.index');
 
-        Route::put('edit', 'update')->name('admin.giftcard.update'); 
-        
-        Route::delete('edit/{id}', 'destroy')->name('admin.giftcard.delete');
+        Route::get('balances', 'balances')->name('admin.gift_cards.balances.index');
 
-        Route::get('payment', 'payments')->name('admin.giftcard.payment');
+        Route::get('{id}', 'edit')->name('admin.gift_cards.edit');
 
-        Route::get('balance', 'balances')->name('admin.giftcard.balance');
+        Route::put('{id}', 'update')->name('admin.gift_cards.update');
+
+        Route::delete('{id}', 'destroy')->name('admin.gift_cards.delete');
     });
 });
