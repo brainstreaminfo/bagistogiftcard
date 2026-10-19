@@ -2,17 +2,26 @@
 
 namespace Brainstream\Giftcard\Providers;
 
+use Brainstream\Giftcard\Http\Controllers\Admin\InvoiceController;
+use Brainstream\Giftcard\Http\Controllers\Admin\RefundController;
 use Brainstream\Giftcard\Http\Controllers\Paypal\SmartButtonController;
+use Brainstream\Giftcard\Http\Controllers\Shop\OrderController;
 use Brainstream\Giftcard\Listeners\GiftCard;
+use Brainstream\Giftcard\Listeners\OrderMail;
 use Brainstream\Giftcard\Observers\InvoiceObserver;
 use Brainstream\Giftcard\Observers\OrderObserver;
 use Brainstream\Giftcard\Observers\RefundObserver;
+use Brainstream\Giftcard\Services\GiftCardTotals;
+use Illuminate\Mail\Events\MessageSending;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\ServiceProvider;
+use Webkul\Admin\Http\Controllers\Sales\InvoiceController as BaseInvoiceController;
+use Webkul\Admin\Http\Controllers\Sales\RefundController as BaseRefundController;
 use Webkul\Paypal\Http\Controllers\SmartButtonController as BaseSmartButtonController;
 use Webkul\Sales\Models\InvoiceProxy;
 use Webkul\Sales\Models\OrderProxy;
 use Webkul\Sales\Models\RefundProxy;
+use Webkul\Shop\Http\Controllers\Customer\Account\OrderController as BaseOrderController;
 
 class GiftcardServiceProvider extends ServiceProvider
 {
@@ -28,6 +37,8 @@ class GiftcardServiceProvider extends ServiceProvider
         'bagisto.shop.checkout.cart.summary.coupon.after' => 'giftcard::shop.checkout.gift-card',
         'bagisto.shop.checkout.onepage.summary.coupon.after' => 'giftcard::shop.checkout.gift-card',
         'bagisto.shop.customers.account.orders.view.information.discount.after' => 'giftcard::shop.customers.orders.gift-card',
+        'bagisto.shop.customers.account.orders.view.invoices.grand-total.before' => 'giftcard::shop.customers.orders.invoice-gift-card',
+        'bagisto.shop.customers.account.orders.view.refunds.grand-total.before' => 'giftcard::shop.customers.orders.refund-gift-card',
         'bagisto.admin.sales.order.view.discount.after' => 'giftcard::admin.sales.orders.gift-card',
     ];
 
@@ -45,6 +56,14 @@ class GiftcardServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(dirname(__DIR__).'/Config/occasions.php', 'giftcard.occasions');
 
         $this->app->bind(BaseSmartButtonController::class, SmartButtonController::class);
+
+        $this->app->bind(BaseInvoiceController::class, InvoiceController::class);
+
+        $this->app->bind(BaseRefundController::class, RefundController::class);
+
+        $this->app->bind(BaseOrderController::class, OrderController::class);
+
+        $this->app->scoped(GiftCardTotals::class);
     }
 
     /**
@@ -79,6 +98,8 @@ class GiftcardServiceProvider extends ServiceProvider
         Event::listen('checkout.cart.collect.totals.after', [GiftCard::class, 'applyToCart']);
 
         Event::listen('sales.order.cancel.after', [GiftCard::class, 'restoreFromCanceledOrder']);
+
+        Event::listen(MessageSending::class, [OrderMail::class, 'addGiftCardLine']);
 
         foreach ($this->viewRenderEvents as $event => $template) {
             Event::listen($event, fn ($viewRenderEventManager) => $viewRenderEventManager->addTemplate($template));
